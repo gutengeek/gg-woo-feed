@@ -1,0 +1,913 @@
+/**
+ * Form CSS.
+ */
+
+label.gg_woo_feed-label {
+    display: block;
+}
+
+.gg_woo_feed-checkbox-field-wrap label.gg_woo_feed-label,
+.gg_woo_feed-switch-field-wrap label.gg_woo_feed-label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+
+/** Map */
+.opal-map {
+    min-height: 300px;
+    width: 100%;
+    margin: 5px 1px 1px;
+    border: solid 1px #DDD;
+    box-sizing: border-box;
+}
+
+.opal-map img {
+    max-width: none;
+}
+
+.gg_woo_feed-map-wrap {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 12px;
+}
+
+/** Switch */
+.gg_woo_feed-switch-input {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.gg_woo_feed-switch-input input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.gg_woo_feed-switch-input .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.gg_woo_feed-switch-input .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.gg_woo_feed-switch-input input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.gg_woo_feed-switch-input input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.gg_woo_feed-switch-input input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.gg_woo_feed-switch-input .slider.round {
+    border-radius: 34px;
+}
+
+.gg_woo_feed-switch-input .slider.round:before {
+    border-radius: 50%;
+}
+
+
+/*
+ * jQuery UI CSS Framework 1.8.16
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * WordPress Styles adopted from "jQuery UI Datepicker CSS for WordPress"
+ * https://github.com/stuttter/wp-datepicker-styling
+ *
+ */
+
+/* line 15, sass/partials/_jquery_ui.scss */
+
+* html .gg_woo_feed-element.ui-helper-clearfix {
+    height: 1%;
+}
+
+/* line 24, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker,
+.gg_woo_feed-element .ui-datepicker {
+    padding: 0;
+    margin: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    border-top: none;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.075);
+    min-width: 17em;
+    width: auto; /* Default Color Scheme */
+}
+
+/* line 38, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker *,
+.gg_woo_feed-element .ui-datepicker * {
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+/* line 46, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker table,
+.gg_woo_feed-element .ui-datepicker table {
+    font-size: 13px;
+    margin: 0;
+    border: none;
+    border-collapse: collapse;
+}
+
+/* line 53, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background-image: none;
+    border: none;
+    color: #fff;
+    font-weight: normal;
+}
+
+/* line 61, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-header .ui-state-hover,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-header .ui-state-hover {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+/* line 67, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-title,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-title {
+    margin: 0;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+}
+
+/* line 75, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-title select,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-title select {
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+
+/* line 81, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-prev,
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-next,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-prev,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-next {
+    position: relative;
+    top: 0;
+    height: 34px;
+    width: 34px;
+}
+
+/* line 89, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-state-hover.ui-datepicker-prev,
+.gg_woo_feed-element.ui-datepicker .ui-state-hover.ui-datepicker-next,
+.gg_woo_feed-element .ui-datepicker .ui-state-hover.ui-datepicker-prev,
+.gg_woo_feed-element .ui-datepicker .ui-state-hover.ui-datepicker-next {
+    border: none;
+}
+
+/* line 94, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-prev,
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-prev-hover,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-prev,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-prev-hover {
+    left: 0;
+}
+
+/* line 99, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-next,
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-next-hover,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-next,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-next-hover {
+    right: 0;
+}
+
+/* line 104, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-next span,
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-prev span,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-next span,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-prev span {
+    display: none;
+}
+
+/* line 109, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-prev,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-prev {
+    float: left;
+}
+
+/* line 113, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-next,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-next {
+    float: right;
+}
+
+/* line 117, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-prev:before,
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-next:before,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-prev:before,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-next:before {
+    font: normal 20px/34px 'dashicons';
+    padding-left: 7px;
+    color: #fff;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 34px;
+    height: 34px;
+}
+
+/* line 129, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-prev:before,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-prev:before {
+    content: '\f341';
+}
+
+/* line 133, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-next:before,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-next:before {
+    content: '\f345';
+}
+
+/* line 137, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-prev-hover:before,
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-next-hover:before,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-prev-hover:before,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-next-hover:before {
+    opacity: 0.7;
+}
+
+/* line 142, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker select.ui-datepicker-month,
+.gg_woo_feed-element.ui-datepicker select.ui-datepicker-year,
+.gg_woo_feed-element .ui-datepicker select.ui-datepicker-month,
+.gg_woo_feed-element .ui-datepicker select.ui-datepicker-year {
+    width: 33%;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: #fff;
+}
+
+/* line 149, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker select.ui-datepicker-month option,
+.gg_woo_feed-element.ui-datepicker select.ui-datepicker-year option,
+.gg_woo_feed-element .ui-datepicker select.ui-datepicker-month option,
+.gg_woo_feed-element .ui-datepicker select.ui-datepicker-year option {
+    color: #333;
+}
+
+/* line 154, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker thead,
+.gg_woo_feed-element .ui-datepicker thead {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* line 157, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker thead th,
+.gg_woo_feed-element .ui-datepicker thead th {
+    font-weight: normal;
+}
+
+/* line 162, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker th,
+.gg_woo_feed-element .ui-datepicker th {
+    padding: 10px;
+}
+
+/* line 166, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td,
+.gg_woo_feed-element .ui-datepicker td {
+    padding: 0;
+    border: 1px solid #f4f4f4;
+}
+
+/* line 171, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td.ui-datepicker-other-month,
+.gg_woo_feed-element .ui-datepicker td.ui-datepicker-other-month {
+    border: transparent;
+}
+
+/* line 175, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td.ui-datepicker-week-end,
+.gg_woo_feed-element .ui-datepicker td.ui-datepicker-week-end {
+    background-color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+}
+
+/* line 178, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td.ui-datepicker-week-end.ui-datepicker-today,
+.gg_woo_feed-element .ui-datepicker td.ui-datepicker-week-end.ui-datepicker-today {
+    -webkit-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* line 185, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td.ui-datepicker-today,
+.gg_woo_feed-element .ui-datepicker td.ui-datepicker-today {
+    background-color: #f0f0c0;
+}
+
+/* line 189, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td.ui-datepicker-current-day,
+.gg_woo_feed-element .ui-datepicker td.ui-datepicker-current-day {
+    background: #bbdd88;
+}
+
+/* line 193, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td .ui-state-default,
+.gg_woo_feed-element .ui-datepicker td .ui-state-default {
+    background: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+    display: block;
+    padding: 5px 10px;
+    font-weight: normal;
+    color: #444;
+}
+
+/* line 205, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td.ui-state-disabled .ui-state-default,
+.gg_woo_feed-element .ui-datepicker td.ui-state-disabled .ui-state-default {
+    opacity: 0.5;
+}
+
+/* line 210, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #00a0d2;
+}
+
+/* line 215, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker thead,
+.gg_woo_feed-element .ui-datepicker thead {
+    background: #32373c;
+}
+
+/* line 219, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.gg_woo_feed-element.ui-datepicker td .ui-state-active,
+.gg_woo_feed-element .ui-datepicker td .ui-state-hover,
+.gg_woo_feed-element .ui-datepicker td .ui-state-active {
+    background: #0073aa;
+    color: #fff;
+}
+
+/* line 224, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-timepicker-div,
+.gg_woo_feed-element .ui-datepicker .ui-timepicker-div {
+    font-size: 14px;
+}
+
+/* line 226, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-timepicker-div dl,
+.gg_woo_feed-element .ui-datepicker .ui-timepicker-div dl {
+    text-align: left;
+    padding: 0 .6em;
+}
+
+/* line 229, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-timepicker-div dl dt,
+.gg_woo_feed-element .ui-datepicker .ui-timepicker-div dl dt {
+    float: left;
+    clear: left;
+    padding: 0 0 0 5px;
+}
+
+/* line 234, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-timepicker-div dl dd,
+.gg_woo_feed-element .ui-datepicker .ui-timepicker-div dl dd {
+    margin: 0 10px 10px 40%;
+}
+
+/* line 236, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-timepicker-div dl dd select,
+.gg_woo_feed-element .ui-datepicker .ui-timepicker-div dl dd select {
+    width: 100%;
+}
+
+/* line 242, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-timepicker-div + .ui-datepicker-buttonpane,
+.gg_woo_feed-element .ui-datepicker .ui-timepicker-div + .ui-datepicker-buttonpane {
+    padding: .6em;
+    text-align: left;
+}
+
+/* line 246, sass/partials/_jquery_ui.scss */
+
+.gg_woo_feed-element.ui-datepicker .ui-timepicker-div + .ui-datepicker-buttonpane .button-primary,
+.gg_woo_feed-element.ui-datepicker .ui-timepicker-div + .ui-datepicker-buttonpane .button-secondary,
+.gg_woo_feed-element .ui-datepicker .ui-timepicker-div + .ui-datepicker-buttonpane .button-primary,
+.gg_woo_feed-element .ui-datepicker .ui-timepicker-div + .ui-datepicker-buttonpane .button-secondary {
+    padding: 0 10px 1px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 .6em .4em .4em;
+}
+
+/* line 260, sass/partials/_jquery_ui.scss */
+
+.admin-color-fresh .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-fresh .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-fresh .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-fresh .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #00a0d2;
+}
+
+/* line 265, sass/partials/_jquery_ui.scss */
+
+.admin-color-fresh .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-fresh .gg_woo_feed-element .ui-datepicker thead {
+    background: #32373c;
+}
+
+/* line 269, sass/partials/_jquery_ui.scss */
+
+.admin-color-fresh .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-fresh .gg_woo_feed-element .ui-datepicker td .ui-state-hover {
+    background: #0073aa;
+    color: #fff;
+}
+
+/* line 277, sass/partials/_jquery_ui.scss */
+
+.admin-color-blue .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-blue .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-blue .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-blue .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #52accc;
+}
+
+/* line 282, sass/partials/_jquery_ui.scss */
+
+.admin-color-blue .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-blue .gg_woo_feed-element .ui-datepicker thead {
+    background: #4796b3;
+}
+
+/* line 291, sass/partials/_jquery_ui.scss */
+
+.admin-color-blue .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-blue .gg_woo_feed-element.ui-datepicker td .ui-state-active,
+.admin-color-blue .gg_woo_feed-element .ui-datepicker td .ui-state-hover,
+.admin-color-blue .gg_woo_feed-element .ui-datepicker td .ui-state-active {
+    background: #096484;
+    color: #fff;
+}
+
+/* line 296, sass/partials/_jquery_ui.scss */
+
+.admin-color-blue .gg_woo_feed-element.ui-datepicker td.ui-datepicker-today,
+.admin-color-blue .gg_woo_feed-element .ui-datepicker td.ui-datepicker-today {
+    background: #eee;
+}
+
+/* line 305, sass/partials/_jquery_ui.scss */
+
+.admin-color-coffee .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-coffee .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-coffee .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-coffee .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #59524c;
+}
+
+/* line 310, sass/partials/_jquery_ui.scss */
+
+.admin-color-coffee .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-coffee .gg_woo_feed-element .ui-datepicker thead {
+    background: #46403c;
+}
+
+/* line 314, sass/partials/_jquery_ui.scss */
+
+.admin-color-coffee .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-coffee .gg_woo_feed-element .ui-datepicker td .ui-state-hover {
+    background: #c7a589;
+    color: #fff;
+}
+
+/* line 322, sass/partials/_jquery_ui.scss */
+
+.admin-color-ectoplasm .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-ectoplasm .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-ectoplasm .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-ectoplasm .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #523f6d;
+}
+
+/* line 327, sass/partials/_jquery_ui.scss */
+
+.admin-color-ectoplasm .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-ectoplasm .gg_woo_feed-element .ui-datepicker thead {
+    background: #413256;
+}
+
+/* line 331, sass/partials/_jquery_ui.scss */
+
+.admin-color-ectoplasm .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-ectoplasm .gg_woo_feed-element .ui-datepicker td .ui-state-hover {
+    background: #a3b745;
+    color: #fff;
+}
+
+/* line 339, sass/partials/_jquery_ui.scss */
+
+.admin-color-midnight .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-midnight .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-midnight .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-midnight .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #363b3f;
+}
+
+/* line 344, sass/partials/_jquery_ui.scss */
+
+.admin-color-midnight .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-midnight .gg_woo_feed-element .ui-datepicker thead {
+    background: #26292c;
+}
+
+/* line 348, sass/partials/_jquery_ui.scss */
+
+.admin-color-midnight .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-midnight .gg_woo_feed-element .ui-datepicker td .ui-state-hover {
+    background: #e14d43;
+    color: #fff;
+}
+
+/* line 356, sass/partials/_jquery_ui.scss */
+
+.admin-color-ocean .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-ocean .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-ocean .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-ocean .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #738e96;
+}
+
+/* line 361, sass/partials/_jquery_ui.scss */
+
+.admin-color-ocean .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-ocean .gg_woo_feed-element .ui-datepicker thead {
+    background: #627c83;
+}
+
+/* line 365, sass/partials/_jquery_ui.scss */
+
+.admin-color-ocean .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-ocean .gg_woo_feed-element .ui-datepicker td .ui-state-hover {
+    background: #9ebaa0;
+    color: #fff;
+}
+
+/* line 373, sass/partials/_jquery_ui.scss */
+
+.admin-color-sunrise .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-sunrise .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-sunrise .gg_woo_feed-element.ui-datepicker .ui-datepicker-header .ui-state-hover,
+.admin-color-sunrise .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-sunrise .gg_woo_feed-element .ui-datepicker .ui-datepicker-header,
+.admin-color-sunrise .gg_woo_feed-element .ui-datepicker .ui-datepicker-header .ui-state-hover {
+    background: #cf4944;
+}
+
+/* line 379, sass/partials/_jquery_ui.scss */
+
+.admin-color-sunrise .gg_woo_feed-element.ui-datepicker th,
+.admin-color-sunrise .gg_woo_feed-element .ui-datepicker th {
+    border-color: #be3631;
+    background: #be3631;
+}
+
+/* line 384, sass/partials/_jquery_ui.scss */
+
+.admin-color-sunrise .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-sunrise .gg_woo_feed-element .ui-datepicker td .ui-state-hover {
+    background: #dd823b;
+    color: #fff;
+}
+
+/* line 392, sass/partials/_jquery_ui.scss */
+
+.admin-color-light .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-light .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-light .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-light .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #e5e5e5;
+}
+
+/* line 397, sass/partials/_jquery_ui.scss */
+
+.admin-color-light .gg_woo_feed-element.ui-datepicker select.ui-datepicker-month,
+.admin-color-light .gg_woo_feed-element.ui-datepicker select.ui-datepicker-year,
+.admin-color-light .gg_woo_feed-element .ui-datepicker select.ui-datepicker-month,
+.admin-color-light .gg_woo_feed-element .ui-datepicker select.ui-datepicker-year {
+    color: #555;
+}
+
+/* line 402, sass/partials/_jquery_ui.scss */
+
+.admin-color-light .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-light .gg_woo_feed-element .ui-datepicker thead {
+    background: #888;
+}
+
+/* line 406, sass/partials/_jquery_ui.scss */
+
+.admin-color-light .gg_woo_feed-element.ui-datepicker .ui-datepicker-title,
+.admin-color-light .gg_woo_feed-element.ui-datepicker td .ui-state-default,
+.admin-color-light .gg_woo_feed-element.ui-datepicker .ui-datepicker-prev:before,
+.admin-color-light .gg_woo_feed-element.ui-datepicker .ui-datepicker-next:before,
+.admin-color-light .gg_woo_feed-element .ui-datepicker .ui-datepicker-title,
+.admin-color-light .gg_woo_feed-element .ui-datepicker td .ui-state-default,
+.admin-color-light .gg_woo_feed-element .ui-datepicker .ui-datepicker-prev:before,
+.admin-color-light .gg_woo_feed-element .ui-datepicker .ui-datepicker-next:before {
+    color: #555;
+}
+
+/* line 414, sass/partials/_jquery_ui.scss */
+
+.admin-color-light .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-light .gg_woo_feed-element.ui-datepicker td .ui-state-active,
+.admin-color-light .gg_woo_feed-element .ui-datepicker td .ui-state-hover,
+.admin-color-light .gg_woo_feed-element .ui-datepicker td .ui-state-active {
+    background: #ccc;
+}
+
+/* line 418, sass/partials/_jquery_ui.scss */
+
+.admin-color-light .gg_woo_feed-element.ui-datepicker td.ui-datepicker-today,
+.admin-color-light .gg_woo_feed-element .ui-datepicker td.ui-datepicker-today {
+    background: #eee;
+}
+
+/* line 426, sass/partials/_jquery_ui.scss */
+
+.admin-color-bbp-evergreen .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-bbp-evergreen .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-bbp-evergreen .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-bbp-evergreen .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #56b274;
+}
+
+/* line 431, sass/partials/_jquery_ui.scss */
+
+.admin-color-bbp-evergreen .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-bbp-evergreen .gg_woo_feed-element .ui-datepicker thead {
+    background: #36533f;
+}
+
+/* line 435, sass/partials/_jquery_ui.scss */
+
+.admin-color-bbp-evergreen .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-bbp-evergreen .gg_woo_feed-element .ui-datepicker td .ui-state-hover {
+    background: #446950;
+    color: #fff;
+}
+
+/* line 443, sass/partials/_jquery_ui.scss */
+
+.admin-color-bbp-mint .gg_woo_feed-element.ui-datepicker .ui-widget-header,
+.admin-color-bbp-mint .gg_woo_feed-element.ui-datepicker .ui-datepicker-header,
+.admin-color-bbp-mint .gg_woo_feed-element .ui-datepicker .ui-widget-header,
+.admin-color-bbp-mint .gg_woo_feed-element .ui-datepicker .ui-datepicker-header {
+    background: #4ca26a;
+}
+
+/* line 448, sass/partials/_jquery_ui.scss */
+
+.admin-color-bbp-mint .gg_woo_feed-element.ui-datepicker thead,
+.admin-color-bbp-mint .gg_woo_feed-element .ui-datepicker thead {
+    background: #4f6d59;
+}
+
+/* line 452, sass/partials/_jquery_ui.scss */
+
+.admin-color-bbp-mint .gg_woo_feed-element.ui-datepicker td .ui-state-hover,
+.admin-color-bbp-mint .gg_woo_feed-element .ui-datepicker td .ui-state-hover {
+    background: #5fb37c;
+    color: #fff;
+}
+
+
+/** Media file, file list **/
+
+.gg_woo_feed-media-status .img-status {
+    clear: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: auto;
+}
+
+/* line 430, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-media-status .img-status img {
+    max-width: 350px;
+    height: auto;
+}
+
+/* line 436, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-media-status .img-status img,
+.gg_woo_feed-media-status .embed-status {
+    background: #eee;
+    border: 5px solid #ffffff;
+    outline: 1px solid #e9e9e9;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    background-image: linear-gradient(45deg, #d0d0d0 25%, transparent 25%, transparent 75%, #d0d0d0 75%, #d0d0d0), linear-gradient(45deg, #d0d0d0 25%, transparent 25%, transparent 75%, #d0d0d0 75%, #d0d0d0);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    margin: 15px 0 0 0;
+}
+
+/* line 450, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-media-status .embed-status {
+    float: left;
+    max-width: 800px;
+}
+
+/* line 455, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-media-status .img-status,
+.gg_woo_feed-media-status .embed-status {
+    position: relative;
+}
+
+/* line 458, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-media-status .img-status .gg_woo_feed-remove-file-button,
+.gg_woo_feed-media-status .embed-status .gg_woo_feed-remove-file-button {
+    height: 22px;
+    right: -5px;
+    position: absolute;
+    text-indent: -9999px;
+    top: -5px;
+    width: 25px;
+    font-size: 20px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.gg_woo_feed-media-status .img-status .gg_woo_feed-remove-file-button:after,
+.gg_woo_feed-media-status .embed-status .gg_woo_feed-remove-file-button:after {
+    content: "\f335";
+    font-family: dashicons;
+    position: absolute;
+    top: -3px;
+    right: 3px;
+    display: inline-block;
+    text-indent: 1px;
+    color: red;
+}
+
+/* line 472, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-media-status .img-status .gg_woo_feed-remove-file-button {
+    top: 10px;
+}
+
+/* line 477, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-media-status .img-status img,
+.gg_woo_feed-media-status .file-status > span {
+    cursor: pointer;
+}
+
+/* line 482, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-media-status.gg_woo_feed-attach-list .img-status img,
+.gg_woo_feed-media-status.gg_woo_feed-attach-list .file-status > span {
+    cursor: move;
+}
+
+/* line 489, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-type-file-list .gg_woo_feed-media-status .img-status {
+    clear: none;
+    vertical-align: middle;
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+/* line 498, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-attach-list li {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* line 504, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-attach-list li img {
+    float: left;
+    margin-right: 10px;
+}
+
+/* line 510, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-remove-wrapper {
+    margin: 0;
+}
+
+/* line 518, sass/partials/_main_wrap.scss */
+
+.gg_woo_feed-indented-hierarchy {
+    padding-left: 1.5em;
+}

@@ -1,0 +1,71 @@
+.gg_woo_feed-btn {
+  box-shadow: none;
+  border-radius: 5px;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+
+  i {
+    margin-left: 5px;
+    color: #fff;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background-color: #81bdec;
+    color: #fff;
+    cursor: not-allowed;
+  }
+}
+
+.gg_woo_feed-btn-submit {
+  background-color: $primary;
+  color: #fff;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: #0f7fd8;
+    color: #fff;
+  }
+}
+
+.gg_woo_feed-btn-primary {
+  color: $primary;
+  background-color: #fff;
+  border: 1px solid $primary;
+
+  &:hover {
+    background-color: $primary;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+}
+
+.gg_woo_feed-btn--full {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.gg_woo_feed-wrap .gg_woo_feed-btn {
+  font-weight: bold;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0;
+  display: inline-block;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 20px;
+  width: auto;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: none;
+  border-radius: 5px;
+}

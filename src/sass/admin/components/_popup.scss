@@ -1,0 +1,62 @@
+.gg_woo_feed-wrap {
+  font-size: 11px;
+  color: #141823;
+  line-height: 1.28;
+}
+
+.gg_woo_feed-open-popup {
+  width: 200px;
+}
+
+.gg_woo_feed-popup-wrap {
+  .gg_woo_feed-popup-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    z-index: 1000010;
+  }
+
+  .gg_woo_feed-popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 380px;
+    height: 450px;
+    padding: 30px 0 0;
+    background-color: #f1f1f1;
+    z-index: 1000011;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.3);
+    box-shadow: 0 3px 6px rgba(0,0,0,.3);
+  }
+
+  .gg_woo_feed-popup-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    height: 22px;
+    width: 22px;
+    cursor: pointer;
+    color: red;
+  }
+
+  .gg_woo_feed-popup-body {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.gg_woo_feed-open-popup-wrap {
+  margin-bottom: 15px;
+}
+
+.gg_woo_feed-categories-list-wrap {
+  height: 320px;
+  overflow-y: auto;
+}

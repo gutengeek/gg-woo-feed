@@ -1,0 +1,2045 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GG Woo Feed\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-25 07:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.2; wp-5.4"
+
+#. Name of the plugin
+#: inc/Admin/Admin.php:132 inc/Admin/Admin.php:133
+#: inc/Admin/Metabox/Product_Cat_Metabox.php:34
+#: inc/Admin/Metabox/Product_Cat_Metabox.php:56
+#: inc/Admin/Metabox/Product_Metabox.php:32
+msgid "GG Woo Feed"
+msgstr ""
+
+#: inc/Admin/Admin.php:142 inc/Admin/Admin.php:143
+#: inc/Admin/view/manage-feeds.php:9
+msgid "Manage Feeds"
+msgstr ""
+
+#: inc/Admin/Admin.php:151 inc/Admin/Admin.php:152
+#: inc/Admin/view/add-feed.php:8 inc/Admin/view/edit-feed.php:11
+msgid "Add New Feed"
+msgstr ""
+
+#: inc/Admin/Admin.php:160 inc/Admin/Admin.php:161
+msgid "Settings"
+msgstr ""
+
+#: inc/Admin/Admin.php:278
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+#: inc/Common/Dropdown.php:16 inc/Common/Dropdown.php:27
+msgid "All Products"
+msgstr ""
+
+#: inc/Common/Dropdown.php:17
+msgid "Only In Stock"
+msgstr ""
+
+#: inc/Common/Dropdown.php:18
+msgid "Only Out of Stock"
+msgstr ""
+
+#: inc/Common/Dropdown.php:28
+msgid "Only Products on Sale"
+msgstr ""
+
+#: inc/Common/Dropdown.php:29
+msgid "Only Products NOT on Sale"
+msgstr ""
+
+#: inc/Common/Dropdown.php:36
+msgid "Select categories"
+msgstr ""
+
+#: inc/Common/Dropdown.php:81
+msgid "All Categories"
+msgstr ""
+
+#: inc/Common/Dropdown.php:97 inc/Admin/view/metabox-feed-filter.php:126
+#: inc/Libraries/Form/Helper.php:189
+msgid "Done"
+msgstr ""
+
+#: inc/Common/Dropdown.php:103 inc/Common/Dropdown.php:112
+#: inc/Common/Dropdown.php:123 inc/Common/Dropdown.php:132
+#: inc/Common/Dropdown.php:143 inc/Common/Dropdown.php:160
+#: inc/Common/Dropdown.php:275 inc/Core/functions.php:69
+#: inc/Admin/Metabox/Product_Metabox.php:129
+#: inc/Admin/Metabox/Product_Metabox.php:141
+msgid "Select"
+msgstr ""
+
+#: inc/Common/Dropdown.php:104
+msgid "new"
+msgstr ""
+
+#: inc/Common/Dropdown.php:105
+msgid "refurbished"
+msgstr ""
+
+#: inc/Common/Dropdown.php:106
+msgid "used"
+msgstr ""
+
+#: inc/Common/Dropdown.php:113
+msgid "newborn"
+msgstr ""
+
+#: inc/Common/Dropdown.php:114
+msgid "infant"
+msgstr ""
+
+#: inc/Common/Dropdown.php:115
+msgid "toddler"
+msgstr ""
+
+#: inc/Common/Dropdown.php:116
+msgid "kids"
+msgstr ""
+
+#: inc/Common/Dropdown.php:117
+msgid "adult"
+msgstr ""
+
+#: inc/Common/Dropdown.php:124
+msgid "male"
+msgstr ""
+
+#: inc/Common/Dropdown.php:125
+msgid "female"
+msgstr ""
+
+#: inc/Common/Dropdown.php:126
+msgid "unisex"
+msgstr ""
+
+#: inc/Common/Dropdown.php:133
+msgid "regular"
+msgstr ""
+
+#: inc/Common/Dropdown.php:134
+msgid "petite"
+msgstr ""
+
+#: inc/Common/Dropdown.php:135
+msgid "plus"
+msgstr ""
+
+#: inc/Common/Dropdown.php:136
+msgid "big and tall"
+msgstr ""
+
+#: inc/Common/Dropdown.php:137
+msgid "maternity"
+msgstr ""
+
+#: inc/Common/Dropdown.php:144
+msgid "US"
+msgstr ""
+
+#: inc/Common/Dropdown.php:145
+msgid "UK"
+msgstr ""
+
+#: inc/Common/Dropdown.php:146
+msgid "EU"
+msgstr ""
+
+#: inc/Common/Dropdown.php:147
+msgid "DE"
+msgstr ""
+
+#: inc/Common/Dropdown.php:148
+msgid "FR"
+msgstr ""
+
+#: inc/Common/Dropdown.php:149
+msgid "JP"
+msgstr ""
+
+#: inc/Common/Dropdown.php:150
+msgid "CN"
+msgstr ""
+
+#: inc/Common/Dropdown.php:151
+msgid "IT"
+msgstr ""
+
+#: inc/Common/Dropdown.php:152
+msgid "BR"
+msgstr ""
+
+#: inc/Common/Dropdown.php:153
+msgid "MEX"
+msgstr ""
+
+#: inc/Common/Dropdown.php:154
+msgid "AU"
+msgstr ""
+
+#: inc/Common/Dropdown.php:161
+msgid "A+++"
+msgstr ""
+
+#: inc/Common/Dropdown.php:162
+msgid "A++"
+msgstr ""
+
+#: inc/Common/Dropdown.php:163
+msgid "A+"
+msgstr ""
+
+#: inc/Common/Dropdown.php:164
+msgid "A"
+msgstr ""
+
+#: inc/Common/Dropdown.php:165
+msgid "B"
+msgstr ""
+
+#: inc/Common/Dropdown.php:166
+msgid "C"
+msgstr ""
+
+#: inc/Common/Dropdown.php:167
+msgid "D"
+msgstr ""
+
+#: inc/Common/Dropdown.php:168
+msgid "E"
+msgstr ""
+
+#: inc/Common/Dropdown.php:169
+msgid "F"
+msgstr ""
+
+#: inc/Common/Dropdown.php:170
+msgid "G"
+msgstr ""
+
+#: inc/Common/Dropdown.php:340 inc/Libraries/Form/Helper.php:223
+msgid "Default"
+msgstr ""
+
+#: inc/Common/Dropdown.php:341
+msgid "Strip Tags"
+msgstr ""
+
+#: inc/Common/Dropdown.php:342
+msgid "UTF-8 Encode"
+msgstr ""
+
+#: inc/Common/Dropdown.php:343
+msgid "htmlentities"
+msgstr ""
+
+#: inc/Common/Dropdown.php:344
+msgid "Integer"
+msgstr ""
+
+#: inc/Common/Dropdown.php:345 inc/Common/Product_Attributes.php:51
+msgid "Price"
+msgstr ""
+
+#: inc/Common/Dropdown.php:346
+msgid "Remove Space"
+msgstr ""
+
+#: inc/Common/Dropdown.php:347
+msgid "Remove ShortCodes"
+msgstr ""
+
+#: inc/Common/Dropdown.php:348
+msgid "Remove Special Character"
+msgstr ""
+
+#: inc/Common/Dropdown.php:349
+msgid "CDATA"
+msgstr ""
+
+#: inc/Common/Dropdown.php:356
+msgid "exclude_product"
+msgstr ""
+
+#: inc/Common/Dropdown.php:392
+msgid "contains"
+msgstr ""
+
+#: inc/Common/Dropdown.php:393
+msgid "not contain"
+msgstr ""
+
+#: inc/Common/Dropdown.php:394
+msgid "equal"
+msgstr ""
+
+#: inc/Common/Dropdown.php:395
+msgid "not equal"
+msgstr ""
+
+#: inc/Common/Dropdown.php:396
+msgid "greater than"
+msgstr ""
+
+#: inc/Common/Dropdown.php:397
+msgid "greater than or equal to"
+msgstr ""
+
+#: inc/Common/Dropdown.php:398
+msgid "less than"
+msgstr ""
+
+#: inc/Common/Dropdown.php:399
+msgid "less or equal to"
+msgstr ""
+
+#: inc/Common/Generate_Wizard.php:378
+msgid "GG Woo Feed Auto Regenerated"
+msgstr ""
+
+#: inc/Common/Generate_Wizard.php:399
+msgid "Feed does not exist!"
+msgstr ""
+
+#: inc/Common/Generate_Wizard.php:407
+msgid "Missing Target Country"
+msgstr ""
+
+#: inc/Common/Generate_Wizard.php:415
+msgid "Missing Target Language"
+msgstr ""
+
+#: inc/Common/Generate_Wizard.php:501
+msgid "Feed sent successfully!"
+msgstr ""
+
+#: inc/Common/Generate_Wizard.php:518
+msgid "Unauthenticated"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:37
+msgid "Product Id"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:38 inc/Admin/view/metabox-feed-data.php:34
+msgid "Product Title"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:39 inc/Admin/view/metabox-feed-data.php:66
+msgid "Product Description"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:40
+msgid "Product Short Description"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:41
+msgid "Product Local Category"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:42
+msgid "Product URL"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:43
+msgid "External Product URL"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:44
+#: inc/Admin/Metabox/Product_Metabox.php:85
+#: inc/Admin/Metabox/Product_Metabox.php:86
+#: inc/Admin/view/filter-advanced.php:37
+msgid "Condition"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:45
+msgid "Parent Id [Group Id]"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:46 inc/Admin/Setting/Google_Ads.php:93
+msgid "SKU"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:47
+msgid "Parent SKU"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:48
+msgid "Availability"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:49
+msgid "Quantity"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:50
+msgid "Regular Price"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:52
+msgid "Sale Price"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:53
+msgid "Regular Price With Tax"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:54
+msgid "Price With Tax"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:55
+msgid "Sale Price With Tax"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:56
+msgid "Sale Start Date"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:57
+msgid "Sale End Date"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:58
+msgid "Weight"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:59
+msgid "Width"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:60
+msgid "Height"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:61
+msgid "Length"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:62
+msgid "Shipping Class"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:63 inc/Core/functions.php:72
+msgid "Product Type"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:64
+msgid "Variation Type"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:65
+msgid "Visibility"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:66
+msgid "Total Rating"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:67
+msgid "Average Rating"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:68
+msgid "Tags"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:69
+msgid "Sale Price Effective Date"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:70
+msgid "Is Bundle"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:71
+msgid "Author Name"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:72
+msgid "Author Email"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:73
+msgid "Date Created"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:74
+msgid "Date Updated"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:78
+msgid "Custom title"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:79
+msgid "Custom description"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:80
+#: inc/Admin/Metabox/Product_Metabox.php:77
+#: inc/Admin/Metabox/Product_Metabox.php:78
+msgid "Custom URL"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:81
+msgid "Custom Condition"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:82
+#: inc/Admin/Metabox/Product_Metabox.php:94
+#: inc/Admin/Metabox/Product_Metabox.php:95
+#: inc/Admin/view/metabox-feed-data.php:170
+msgid "GTIN"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:83
+#: inc/Admin/Metabox/Product_Metabox.php:102
+#: inc/Admin/Metabox/Product_Metabox.php:103
+#: inc/Admin/view/metabox-feed-data.php:179
+msgid "MPN"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:84
+#: inc/Admin/Metabox/Product_Cat_Metabox.php:36
+#: inc/Admin/Metabox/Product_Cat_Metabox.php:59
+#: inc/Admin/Metabox/Product_Metabox.php:110
+#: inc/Admin/Metabox/Product_Metabox.php:111
+#: inc/Admin/view/metabox-feed-data.php:188
+msgid "Google Taxonomy"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:85
+#: inc/Admin/Metabox/Product_Metabox.php:125
+msgid "Identifier exists"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:86
+#: inc/Admin/Metabox/Product_Metabox.php:137
+msgid "Adult"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:87
+msgid "Age Group"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:88
+#: inc/Admin/Metabox/Product_Metabox.php:157
+msgid "Multipack"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:89
+#: inc/Admin/Metabox/Product_Metabox.php:165
+msgid "Color"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:90
+#: inc/Admin/Metabox/Product_Metabox.php:172
+msgid "Gender"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:91
+#: inc/Admin/Metabox/Product_Metabox.php:180
+#: inc/Admin/view/common-add-feed.php:43 inc/Admin/view/custom-add-feed.php:32
+#: inc/Admin/view/edit-config.php:53 inc/Admin/view/facebook-add-feed.php:43
+#: inc/Admin/view/facebook-add-feed.php:89
+#: inc/Admin/view/facebook-add-feed.php:132
+#: inc/Admin/view/facebook-add-feed.php:172
+#: inc/Admin/view/facebook-add-feed.php:212
+#: inc/Admin/view/facebook-add-feed.php:252
+#: inc/Admin/view/facebook-add-feed.php:292
+#: inc/Admin/view/facebook-add-feed.php:336
+#: inc/Admin/view/facebook-add-feed.php:376
+#: inc/Admin/view/facebook-add-feed.php:417
+#: inc/Admin/view/facebook-add-feed.php:457
+#: inc/Admin/view/facebook-add-feed.php:497
+#: inc/Admin/view/facebook-add-feed.php:537
+#: inc/Admin/view/google-add-feed.php:40 inc/Admin/view/google-add-feed.php:80
+#: inc/Admin/view/google-add-feed.php:120
+#: inc/Admin/view/google-add-feed.php:160
+#: inc/Admin/view/google-add-feed.php:200
+#: inc/Admin/view/google-add-feed.php:242
+#: inc/Admin/view/google-add-feed.php:282
+#: inc/Admin/view/google-add-feed.php:326
+#: inc/Admin/view/google-add-feed.php:366
+#: inc/Admin/view/google-add-feed.php:407
+#: inc/Admin/view/google-add-feed.php:447
+#: inc/Admin/view/google-add-feed.php:487
+#: inc/Admin/view/google-add-feed.php:527
+#: inc/Admin/view/pinterest-add-feed.php:40
+#: inc/Admin/view/pinterest-add-feed.php:80
+#: inc/Admin/view/pinterest-add-feed.php:120
+#: inc/Admin/view/pinterest-add-feed.php:160
+#: inc/Admin/view/pinterest-add-feed.php:200
+#: inc/Admin/view/pinterest-add-feed.php:240
+#: inc/Admin/view/pinterest-add-feed.php:280
+#: inc/Admin/view/pinterest-add-feed.php:324
+#: inc/Admin/view/pinterest-add-feed.php:364
+#: inc/Admin/view/pinterest-add-feed.php:405
+#: inc/Admin/view/pinterest-add-feed.php:445
+#: inc/Admin/view/pinterest-add-feed.php:485
+#: inc/Admin/view/pinterest-add-feed.php:525
+msgid "Pattern"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:92
+#: inc/Admin/Metabox/Product_Metabox.php:187
+msgid "Size"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:93
+#: inc/Admin/Metabox/Product_Metabox.php:194
+msgid "Size type"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:94
+#: inc/Admin/Metabox/Product_Metabox.php:202
+msgid "Size system"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:95
+#: inc/Admin/Metabox/Product_Metabox.php:216
+msgid "max_handling_time"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:96
+#: inc/Admin/Metabox/Product_Metabox.php:223
+msgid "min_handling_time"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:97
+#: inc/Admin/Metabox/Product_Metabox.php:230
+msgid "energy_efficiency_class"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:98
+#: inc/Admin/Metabox/Product_Metabox.php:238
+msgid "max_energy_efficiency_class"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:99
+#: inc/Admin/Metabox/Product_Metabox.php:246
+msgid "min_energy_efficiency_class"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:100
+#: inc/Admin/Metabox/Product_Metabox.php:254
+msgid "unit_pricing_measure"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:101
+#: inc/Admin/Metabox/Product_Metabox.php:261
+msgid "unit_pricing_base_measure"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:102
+msgid "installmentmonths"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:103
+msgid "installmentamount"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:104
+#: inc/Admin/Metabox/Product_Metabox.php:284
+msgid "promotion_id"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:108
+msgid "Main Image"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:109
+msgid "Featured Image"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:110
+msgid "Images [Comma Separated]"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:111
+msgid "Additional Image 1"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:112
+msgid "Additional Image 2"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:113
+msgid "Additional Image 3"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:114
+msgid "Additional Image 4"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:115
+msgid "Additional Image 5"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:116
+msgid "Additional Image 6"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:117
+msgid "Additional Image 7"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:118
+msgid "Additional Image 8"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:119
+msgid "Additional Image 9"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:120
+msgid "Additional Image 10"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:125
+msgid "Primary Attributes"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:133
+msgid "Custom Meta"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:142
+msgid "Image Attributes"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:151
+msgid "Product Attributes"
+msgstr ""
+
+#: inc/Common/Product_Attributes.php:160
+msgid "Custom Fields"
+msgstr ""
+
+#: inc/Common/Provider_Attributes.php:12
+msgid "Google Shopping"
+msgstr ""
+
+#: inc/Common/Provider_Attributes.php:13
+msgid "Google Adwords"
+msgstr ""
+
+#: inc/Common/Provider_Attributes.php:14
+msgid "Facebook"
+msgstr ""
+
+#: inc/Common/Provider_Attributes.php:15
+msgid "Pinterest"
+msgstr ""
+
+#: inc/Core/ajax-functions.php:14 inc/Core/ajax-functions.php:61
+#: inc/Core/ajax-functions.php:263
+msgid "Unauthorized Action."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:21
+msgid "Invalid Provider"
+msgstr ""
+
+#: inc/Core/ajax-functions.php:115
+msgid "Missing file name."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:121
+msgid "Missing provider template."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:127
+msgid "The feed type is not supported."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:133
+msgid "Security problem."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:146
+msgid "The feed config was successfully updated."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:151
+msgid "Update Failed."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:179
+#, php-format
+msgid "%s products found."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:183
+msgid "Did not find any products from query filter."
+msgstr ""
+
+#: inc/Core/ajax-functions.php:240
+msgid "Done!"
+msgstr ""
+
+#: inc/Core/ajax-functions.php:245
+msgid "Failed."
+msgstr ""
+
+#: inc/Core/Install.php:67
+msgid "GG Woo Feed Update Interval"
+msgstr ""
+
+#: inc/Core/Metabox.php:67
+msgid "Options"
+msgstr ""
+
+#: inc/Core/mix-functions.php:52
+msgid "Comma"
+msgstr ""
+
+#: inc/Core/mix-functions.php:53
+msgid "Tab"
+msgstr ""
+
+#: inc/Core/mix-functions.php:54
+msgid "Colon"
+msgstr ""
+
+#: inc/Core/mix-functions.php:55
+msgid "Space"
+msgstr ""
+
+#: inc/Core/mix-functions.php:56
+msgid "Pipe"
+msgstr ""
+
+#: inc/Core/mix-functions.php:57
+msgid "Semi Colon"
+msgstr ""
+
+#: inc/Core/mix-functions.php:70 inc/Libraries/Form/Field/Page.php:71
+#: inc/Libraries/Form/Field/Taxonomy.php:72
+#: inc/Libraries/Form/Field/views/input-radio.php:12
+#: inc/Libraries/Form/Field/views/input-select.php:16
+msgid "None"
+msgstr ""
+
+#: inc/Core/mix-functions.php:109
+msgid "Never"
+msgstr ""
+
+#: inc/Core/mix-functions.php:110
+msgid "1 Week"
+msgstr ""
+
+#: inc/Core/mix-functions.php:111
+msgid "24 Hours"
+msgstr ""
+
+#: inc/Core/mix-functions.php:112
+msgid "12 Hours"
+msgstr ""
+
+#: inc/Core/mix-functions.php:113
+msgid "6 Hours"
+msgstr ""
+
+#: inc/Core/mix-functions.php:114
+msgid "1 Hours"
+msgstr ""
+
+#: inc/Core/template-functions.php:23
+msgid "Feed Specification:"
+msgstr ""
+
+#: inc/Core/template-functions.php:25 inc/Core/template-functions.php:35
+#: inc/Core/template-functions.php:45 inc/Core/template-functions.php:61
+#: inc/Admin/view/sidebar.php:13 inc/Admin/view/sidebar.php:41
+msgid "N/A"
+msgstr ""
+
+#: inc/Core/template-functions.php:28
+msgid "Read Article"
+msgstr ""
+
+#: inc/Core/template-functions.php:32
+msgid "Video Documentation:"
+msgstr ""
+
+#: inc/Core/template-functions.php:38
+msgid "Watch now"
+msgstr ""
+
+#: inc/Core/template-functions.php:42
+msgid "Format Supported:"
+msgstr ""
+
+#: inc/Core/template-functions.php:57
+msgid "Support Docs:"
+msgstr ""
+
+#: inc/Admin/Controller/Feed.php:40 inc/Admin/Controller/Feed.php:69
+#: inc/Admin/Controller/Feed.php:107 inc/Admin/Controller/Feed.php:248
+msgid "Permission denied."
+msgstr ""
+
+#: inc/Admin/Controller/Feed.php:84
+#, php-format
+msgid "%d feeds was deleted"
+msgstr ""
+
+#: inc/Admin/Controller/Feed.php:135
+#, php-format
+msgid "%s is successfully deleted"
+msgstr ""
+
+#: inc/Admin/Controller/Feed.php:137
+msgid "Delete failed"
+msgstr ""
+
+#: inc/Admin/Controller/Feed.php:140
+msgid "Feed not found."
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:54
+msgid "Exclude"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:56
+msgid "Exclude this product from feeds."
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:61
+#: inc/Admin/Metabox/Product_Metabox.php:62
+msgid "Custom Title"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:69
+#: inc/Admin/Metabox/Product_Metabox.php:70
+msgid "Custom Description"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:120
+msgid "Extra fields"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:126
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324478\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:130
+#: inc/Admin/Metabox/Product_Metabox.php:142
+msgid "Yes"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:131
+#: inc/Admin/Metabox/Product_Metabox.php:143
+msgid "No"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:138
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324508\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:149
+msgid "Age group"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:150
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324463\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:158
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324488\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:166
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324487\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:173
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324479\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:181
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324483\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:188
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324492\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:195
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324497\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:203
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324502\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:210
+msgid "Shipping"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:211
+msgid "More info"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:217
+#: inc/Admin/Metabox/Product_Metabox.php:224
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/7388496\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:231
+#: inc/Admin/Metabox/Product_Metabox.php:239
+#: inc/Admin/Metabox/Product_Metabox.php:247
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/7562785\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:255
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324455\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:262
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324490\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:266
+msgid "Installment"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:270
+msgid "months"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:271
+#: inc/Admin/Metabox/Product_Metabox.php:278
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/6324474\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:277
+msgid "amount"
+msgstr ""
+
+#: inc/Admin/Metabox/Product_Metabox.php:285
+msgid ""
+"<a target=\"_blank\" href=\"https://support.google."
+"com/merchants/answer/7050148\">More info</a>"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:59 inc/Admin/Page/Google_Sync.php:60
+#: inc/Admin/view/metabox-google-sync.php:10
+msgid "Google Merchant Sync"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:91
+msgid "Google Merchant Sync config"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:104
+msgid "Client ID"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:111
+msgid "Client Secret"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:118
+msgid "Merchant ID"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:125
+msgid "Redirect URL"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:133
+msgid "Reset"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:134 inc/Admin/view/sidebar.php:50
+msgid "Save"
+msgstr ""
+
+#: inc/Admin/Page/Google_Sync.php:140
+msgid "How to create Google Merchant config?"
+msgstr ""
+
+#: inc/Admin/Page/System_Info.php:90 inc/Admin/Page/System_Info.php:91
+#: inc/Admin/Page/System_Info.php:110
+msgid "System Info"
+msgstr ""
+
+#: inc/Admin/Setting/General.php:40
+msgid "Refresh interval"
+msgstr ""
+
+#: inc/Admin/Setting/General.php:44
+msgid "Set a schedule to automatically refresh the feeds."
+msgstr ""
+
+#: inc/Admin/Setting/General.php:48
+msgid "Product per batch"
+msgstr ""
+
+#: inc/Admin/Setting/General.php:51
+msgid ""
+"Split all products to batchs. This will reduce errors due to server overload."
+msgstr ""
+
+#: inc/Admin/Setting/General.php:64
+msgid "Enable Jetpack CDN images"
+msgstr ""
+
+#: inc/Admin/Setting/General.php:65
+msgid "Enable Jetpack CDN images url in feeds."
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:36 inc/Admin/Setting/Google_Ads.php:76
+msgid "Conversion ID"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:38
+msgid "Enter a conversion ID."
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:42
+msgid "Conversion Label"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:44
+msgid "Enter a conversion label."
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:48
+msgid "Order Total Logic"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:51
+msgid "Use order_subtotal: Doesn't include tax and shipping (default)"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:52
+msgid "Use order_total: Includes tax and shipping"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:60
+msgid "Conversion Tracking"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:78
+msgid ""
+"<a href=\"https://support.google.com/adwords/answer/2476688\" "
+"target=\"_blank\">Get your remarketing tag code</a>"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:82
+msgid "Google Merchant Center Prefix"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:84
+msgid ""
+"If you use the WooCommerce Google Product Feed Plugin from WooThemes the "
+"value here should be \"woocommerce_gpf_\" (<a href=\"http://www.woothemes."
+"com/products/google-product-feed/\" target=\"_blank\">WooCommerce Google "
+"Product Feed Plugin</a>). If you use any other plugin for the feed you can "
+"leave this field empty."
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:89
+msgid "Product Identifier"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:92
+msgid "Post ID"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:101
+msgid "Dynamic Remaketing"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:117
+msgid "Ignore tracking for Admin or Shop manager"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:118
+msgid "Ignore tracking if an Admin or Shop manager is logged in."
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:124
+msgid "Disable gtag.js"
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:125
+msgid "Disable gtag.js insertion if another plugin is inserting it already."
+msgstr ""
+
+#: inc/Admin/Setting/Google_Ads.php:134 inc/Admin/view/metabox-feed-data.php:26
+#: inc/Admin/view/metabox-feed-filter.php:21
+msgid "Advanced"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:16
+msgid "Auto Update"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:17
+msgid "Feed Name"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:18 inc/Admin/view/metabox-feed-general.php:23
+msgid "Provider"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:19 inc/Admin/view/common-add-feed.php:11
+#: inc/Admin/view/custom-add-feed.php:10 inc/Admin/view/edit-config.php:14
+#: inc/Admin/view/facebook-add-feed.php:16
+#: inc/Admin/view/google-add-feed.php:16
+#: inc/Admin/view/pinterest-add-feed.php:16
+msgid "Type"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:20
+msgid "Categories"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:21
+msgid "Last updated"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:22
+msgid "Action"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:37 inc/Admin/Table/Feed_Table.php:55
+msgid "Delete"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:53
+msgid "Edit"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:107 inc/Libraries/Form/Field/Page.php:70
+#: inc/Libraries/Form/Field/Taxonomy.php:71
+#: inc/Libraries/Form/Field/views/input-radio.php:11
+#: inc/Libraries/Form/Field/views/input-select.php:15
+msgid "All"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:134 inc/Admin/view/sidebar.php:24
+msgid "Copy"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:140 inc/Admin/view/sidebar.php:30
+msgid "Open"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:145
+msgid "Regenerate"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:152 inc/Admin/view/sidebar.php:36
+#: inc/Libraries/Form/Helper.php:199 inc/Libraries/Form/Field/File.php:299
+msgid "Download"
+msgstr ""
+
+#: inc/Admin/Table/Feed_Table.php:166
+msgid "No feeds available."
+msgstr ""
+
+#: inc/Admin/view/common-add-feed.php:9 inc/Admin/view/custom-add-feed.php:8
+#: inc/Admin/view/edit-config.php:12 inc/Admin/view/facebook-add-feed.php:14
+#: inc/Admin/view/filter-advanced.php:36 inc/Admin/view/google-add-feed.php:14
+#: inc/Admin/view/pinterest-add-feed.php:14
+msgid "Attributes"
+msgstr ""
+
+#: inc/Admin/view/common-add-feed.php:10 inc/Admin/view/custom-add-feed.php:9
+#: inc/Admin/view/edit-config.php:13 inc/Admin/view/facebook-add-feed.php:15
+#: inc/Admin/view/google-add-feed.php:15
+#: inc/Admin/view/pinterest-add-feed.php:15
+msgid "Prefix"
+msgstr ""
+
+#: inc/Admin/view/common-add-feed.php:12 inc/Admin/view/custom-add-feed.php:11
+#: inc/Admin/view/edit-config.php:15 inc/Admin/view/facebook-add-feed.php:17
+#: inc/Admin/view/filter-advanced.php:38 inc/Admin/view/google-add-feed.php:17
+#: inc/Admin/view/pinterest-add-feed.php:17
+msgid "Value"
+msgstr ""
+
+#: inc/Admin/view/common-add-feed.php:13 inc/Admin/view/custom-add-feed.php:12
+#: inc/Admin/view/edit-config.php:16 inc/Admin/view/facebook-add-feed.php:18
+#: inc/Admin/view/google-add-feed.php:18
+#: inc/Admin/view/pinterest-add-feed.php:18
+msgid "Default Value"
+msgstr ""
+
+#: inc/Admin/view/common-add-feed.php:14 inc/Admin/view/custom-add-feed.php:13
+#: inc/Admin/view/edit-config.php:17 inc/Admin/view/facebook-add-feed.php:19
+#: inc/Admin/view/google-add-feed.php:19
+#: inc/Admin/view/pinterest-add-feed.php:19
+msgid "Suffix"
+msgstr ""
+
+#: inc/Admin/view/common-add-feed.php:15 inc/Admin/view/custom-add-feed.php:14
+#: inc/Admin/view/edit-config.php:18 inc/Admin/view/facebook-add-feed.php:20
+#: inc/Admin/view/google-add-feed.php:20
+#: inc/Admin/view/pinterest-add-feed.php:20
+msgid "Output Type"
+msgstr ""
+
+#: inc/Admin/view/common-add-feed.php:42 inc/Admin/view/custom-add-feed.php:31
+#: inc/Admin/view/edit-config.php:52 inc/Admin/view/facebook-add-feed.php:42
+#: inc/Admin/view/facebook-add-feed.php:88
+#: inc/Admin/view/facebook-add-feed.php:131
+#: inc/Admin/view/facebook-add-feed.php:171
+#: inc/Admin/view/facebook-add-feed.php:211
+#: inc/Admin/view/facebook-add-feed.php:251
+#: inc/Admin/view/facebook-add-feed.php:291
+#: inc/Admin/view/facebook-add-feed.php:335
+#: inc/Admin/view/facebook-add-feed.php:375
+#: inc/Admin/view/facebook-add-feed.php:416
+#: inc/Admin/view/facebook-add-feed.php:456
+#: inc/Admin/view/facebook-add-feed.php:496
+#: inc/Admin/view/facebook-add-feed.php:536
+#: inc/Admin/view/google-add-feed.php:39 inc/Admin/view/google-add-feed.php:79
+#: inc/Admin/view/google-add-feed.php:119
+#: inc/Admin/view/google-add-feed.php:159
+#: inc/Admin/view/google-add-feed.php:199
+#: inc/Admin/view/google-add-feed.php:241
+#: inc/Admin/view/google-add-feed.php:281
+#: inc/Admin/view/google-add-feed.php:325
+#: inc/Admin/view/google-add-feed.php:365
+#: inc/Admin/view/google-add-feed.php:406
+#: inc/Admin/view/google-add-feed.php:446
+#: inc/Admin/view/google-add-feed.php:486
+#: inc/Admin/view/google-add-feed.php:526
+#: inc/Admin/view/pinterest-add-feed.php:39
+#: inc/Admin/view/pinterest-add-feed.php:79
+#: inc/Admin/view/pinterest-add-feed.php:119
+#: inc/Admin/view/pinterest-add-feed.php:159
+#: inc/Admin/view/pinterest-add-feed.php:199
+#: inc/Admin/view/pinterest-add-feed.php:239
+#: inc/Admin/view/pinterest-add-feed.php:279
+#: inc/Admin/view/pinterest-add-feed.php:323
+#: inc/Admin/view/pinterest-add-feed.php:363
+#: inc/Admin/view/pinterest-add-feed.php:404
+#: inc/Admin/view/pinterest-add-feed.php:444
+#: inc/Admin/view/pinterest-add-feed.php:484
+#: inc/Admin/view/pinterest-add-feed.php:524
+msgid "Attribute"
+msgstr ""
+
+#: inc/Admin/view/common-add-feed.php:77 inc/Admin/view/custom-add-feed.php:62
+#: inc/Admin/view/edit-config.php:111 inc/Admin/view/facebook-add-feed.php:568
+#: inc/Admin/view/google-add-feed.php:561
+#: inc/Admin/view/pinterest-add-feed.php:554
+msgid "Add New Row"
+msgstr ""
+
+#: inc/Admin/view/edit-feed.php:9
+msgid "Edit Feed"
+msgstr ""
+
+#: inc/Admin/view/filter-advanced.php:12
+msgid "Relationship Conditions"
+msgstr ""
+
+#: inc/Admin/view/filter-advanced.php:16
+msgid "AND"
+msgstr ""
+
+#: inc/Admin/view/filter-advanced.php:17
+msgid "OR"
+msgstr ""
+
+#: inc/Admin/view/filter-advanced.php:28
+msgid "Select a relationship for conditions."
+msgstr ""
+
+#: inc/Admin/view/filter-advanced.php:86
+msgid "No conditions"
+msgstr ""
+
+#: inc/Admin/view/filter-advanced.php:92
+msgid "Add New Condition"
+msgstr ""
+
+#: inc/Admin/view/manage-feeds.php:10
+msgid "Add New"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:5
+msgid "Toggle panel: Data"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:7
+msgid "Data"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:16
+#: inc/Admin/view/metabox-feed-general.php:7
+msgid "General"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:21
+msgid "Mapping"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:39
+msgid "Prefer to use Yoast SEO title."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:46
+msgid ""
+"Prefer to use Custom title. If this value is empty, use the mapping field."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:51
+msgid "Add variation title in the product name."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:56
+msgid "Fix uppercase letters from product titles."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:61
+msgid "Remove capital letters from product titles."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:67
+msgid "Product description will be fill in the below order:"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:72
+msgid "Prefer to use Yoast SEO Meta description."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:79
+msgid "Prefer to use Custom description."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:84
+msgid "Short description"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:89
+msgid "Description"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:93
+msgid "Use the mapping field"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:98
+msgid "Main variable product"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:99
+msgid ""
+"Main variable product settings when you turn on `Show main variable product` "
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:101
+msgid "Main products price"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:105
+msgid "Smallest Variation Price"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:106
+msgid "Biggest Variation Price"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:107
+msgid "Default Variation"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:118
+msgid "Select a price for main variable product."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:123
+msgid "Main products attribute"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:127
+msgid "All attributes"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:128
+msgid "Based on `Main products price`"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:139
+msgid "Select an attribute type for main variable product."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:145
+msgid "Product Images"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:155
+msgid "Include additional_image_link"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:161
+msgid "Product Condition"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:165
+msgid ""
+"Prefer to use Custom condition. If this value is empty, use the mapping "
+"field."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:174
+msgid ""
+"Prefer to use Custom GTIN metabox. If this value is empty, use the mapping "
+"field."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:183
+msgid ""
+"Prefer to use Custom MPN metabox. If this value is empty, use the mapping "
+"field."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:189
+msgid "Product Google Taxonomy will be fill in the below order:"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:193
+msgid "Use Custom Product metabox (in product editor)."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:198
+msgid "Use Custom Product Category Term meta (in product category editor)."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:202
+msgid "If above values is empty, use the mapping field."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:216
+msgid "UTM Parameters"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:220
+msgid "Source"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:225
+msgid "The referrer: (ex: google, newsletter)"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:230
+msgid "Campaign"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:235
+msgid "Product, slogan (ex: new_sale)"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:240
+msgid "Content"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:245
+msgid "Use to differentiate ads."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:251
+msgid "Medium"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:256
+msgid "Marketing medium: (ex: banner, email)"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:261
+msgid "Term"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:266
+msgid "Identify the paid keywords."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:272
+msgid "Custom Path"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-data.php:278
+msgid ""
+"Folders within the bundle that contain feed files. Default folder is `wp-"
+"content/uploads/gg-woo-feed/`."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:5
+msgid "Toggle panel: Filter"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:7
+msgid "Filter"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:16
+msgid "Query"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:31
+msgid "Limit"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:41
+msgid "Stock"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:53
+msgid "Select a stock status."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:58
+msgid "Sale"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:70
+msgid "Select a sale status."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:78
+msgid "Select Product Categories"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:83
+#: inc/Admin/view/metabox-feed-filter.php:101
+msgid "Close"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:96
+msgid "Select Product Types"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:105
+msgid "Select product types"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:145
+msgid "Exclude variations for variable products"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-filter.php:158
+msgid "Show main variable product"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:12
+msgid "File Name"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:17
+msgid "Set a unique file name."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:29
+msgid "Choose a provider or a template."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:35
+msgid "Feed Type"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:47
+msgid "Set a feed type."
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:53
+msgid "Items Wrapper"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:62
+msgid "Single Item Wrapper"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:71
+msgid "Delimiter"
+msgstr ""
+
+#: inc/Admin/view/metabox-feed-general.php:84
+msgid "Enclosure"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:16
+msgid "Authenticate"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:17
+msgid "Access token has expired. Please authenticate it to send feed."
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:24
+msgid "Target Country"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:34
+msgid "Target Language"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:43
+msgid "monthly"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:44
+msgid "weekly"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:45
+msgid "hourly"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:51
+msgid "Schedule"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:70
+msgid "Select day of month"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:84
+msgid "Monday"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:85
+msgid "Tuesday"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:86
+msgid "Wednesday"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:87
+msgid "Thursday"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:88
+msgid "Friday"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:89
+msgid "Saturday"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:90
+msgid "Sunday"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:96
+msgid "Select day of week"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:115
+msgid "Select Hour"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:129
+msgid "Send to Google Merchant"
+msgstr ""
+
+#: inc/Admin/view/metabox-google-sync.php:136
+msgid "Error!"
+msgstr ""
+
+#: inc/Admin/view/processing-generate.php:10
+msgid "Please don't close this tab while generating."
+msgstr ""
+
+#: inc/Admin/view/processing-generate.php:11
+msgid ""
+"If you want to generate variation products, you just should set `Product per "
+"batch` is 50."
+msgstr ""
+
+#: inc/Admin/view/processing-generate.php:17
+msgid "Generate Feed"
+msgstr ""
+
+#: inc/Admin/view/processing-generate.php:42 inc/Libraries/Form/Form.php:337
+msgid "Cancel"
+msgstr ""
+
+#: inc/Admin/view/processing-generate.php:43
+msgid "Stay Edit"
+msgstr ""
+
+#: inc/Admin/view/processing-generate.php:44
+msgid "View Feed"
+msgstr ""
+
+#: inc/Admin/view/processing-generate.php:45
+#: inc/Admin/view/processing-regenerate.php:41
+msgid "Redirect to Manage feeds page in "
+msgstr ""
+
+#: inc/Admin/view/processing-regenerate.php:10
+msgid "Please don't close this tab while regenerating."
+msgstr ""
+
+#: inc/Admin/view/processing-regenerate.php:16
+msgid "Regenerate Feed"
+msgstr ""
+
+#: inc/Admin/view/sidebar.php:6
+msgid "Publish"
+msgstr ""
+
+#: inc/Admin/view/sidebar.php:11
+msgid "Last Updated:"
+msgstr ""
+
+#: inc/Admin/view/sidebar.php:17
+msgid "Actions:"
+msgstr ""
+
+#: inc/Admin/view/sidebar.php:53
+msgid "Save and Generate Feed"
+msgstr ""
+
+#: inc/Common/Module/Google_Merchant_Content_API.php:175
+msgid "You are not authorized."
+msgstr ""
+
+#: inc/Common/Module/Google_Merchant_Content_API.php:176
+msgid ""
+"Your access token has expired. This application uses <strong>OAuth 2."
+"0</strong> to access <strong>Google APIs</strong> and <strong>Content API "
+"for Shopping</strong>\n"
+"                library. Generated access token expires after 3600(s)."
+msgstr ""
+
+#: inc/Common/Module/Google_Merchant_Content_API.php:178
+msgid "Authenticate Now"
+msgstr ""
+
+#: inc/Common/Module/Google_Merchant_Content_API.php:194
+msgid "You are authorized."
+msgstr ""
+
+#: inc/Common/Module/Google_Merchant_Content_API.php:195
+msgid ""
+"Now, you can send feeds to your Google Merchant. Notice: The access token "
+"expires after 3600(s)."
+msgstr ""
+
+#: inc/Libraries/Form/Form.php:214
+msgid "The field ID or field type is required."
+msgstr ""
+
+#: inc/Libraries/Form/Form.php:322
+msgid "Enter username"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:180
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:181
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:182
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:183
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:184
+msgid ""
+"January, February, March, April, May, June, July, August, September, October,"
+" November, December"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:185
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:186
+msgid "Next"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:187
+msgid "Prev"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:188
+msgid "Today"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:190 inc/Libraries/Form/Helper.php:222
+msgid "Clear"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:194
+msgid "Use this file"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:195
+msgid "Use these files"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:196 inc/Libraries/Form/Field/File.php:282
+msgid "Remove Image"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:197 inc/Libraries/Form/Field/File.php:301
+msgid "Remove"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:198 inc/Libraries/Form/Field/File.php:296
+msgid "File:"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:200 inc/Libraries/Form/Field/Taxonomy.php:365
+#: inc/Libraries/Form/Field/views/input-multi-checkbox.php:31
+msgid "Select / Deselect All"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:224
+msgid "Select Color"
+msgstr ""
+
+#: inc/Libraries/Form/Helper.php:225
+msgid "Current Color"
+msgstr ""
+
+#: inc/Common/Integrations/Provider/Feed_Facebook.php:476
+#: inc/Common/Integrations/Provider/Feed_Google.php:536
+#: inc/Common/Integrations/Provider/Feed_Pinterest.php:538
+msgid "Shorting Products"
+msgstr ""
+
+#: inc/Libraries/Form/Field/File.php:61
+msgid "Add or Upload File"
+msgstr ""
+
+#: inc/Libraries/Form/Field/Map.php:92
+msgid "Address"
+msgstr ""
+
+#: inc/Libraries/Form/Field/Map.php:102
+msgid "Latitude"
+msgstr ""
+
+#: inc/Libraries/Form/Field/Map.php:111
+msgid "Longitude"
+msgstr ""
+
+#: inc/Libraries/Form/Field/Map.php:119
+msgid ""
+"You need to register <a href=\"https://developers.google."
+"com/maps/documentation/javascript/get-api-key\" target=\"_blank\">Google API "
+"Key</a>, then put the key in plugin setting."
+msgstr ""
+
+#: inc/Libraries/Form/Field/Page.php:218
+#: inc/Libraries/Form/Field/Taxonomy.php:481
+msgid "No terms"
+msgstr ""
+
+#: inc/Libraries/Form/Field/Page.php:235
+msgid "-- Select Page --"
+msgstr ""
+
+#: inc/Libraries/Form/Field/Uploader.php:161
+#, php-format
+msgid "Allow upload file have size < %s MB and maximum number of files: %s"
+msgstr ""
+
+#: inc/Common/Module/System_Info/Reporters/Server.php:109
+msgctxt "System Info"
+msgid "We recommend to use php 5.4 or higher"
+msgstr ""
+
+#. 1: Minimum recommended_memory, 2: Codex URL
+#: inc/Common/Module/System_Info/Reporters/WordPress.php:81
+#, php-format
+msgctxt "System Info"
+msgid ""
+"We recommend setting memory to at least %1$s. For more information, read "
+"about <a href=\"%2$s\">how to Increase memory allocated to PHP</a>."
+msgstr ""
+
+#: inc/Libraries/Form/Field/views/input-group.php:26
+msgid "Group"
+msgstr ""
+
+#: inc/Libraries/Form/Field/views/input-group.php:51
+#: inc/Libraries/Form/Field/views/input-group.php:102
+msgid "Remove Group"
+msgstr ""
+
+#: inc/Libraries/Form/Field/views/input-group.php:140
+msgid "Add Row"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"GG Woo Feed helps you make feeds with WooCommerce to connect to popular "
+"providers: Google, Facebook, Printerst."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://gutengeek.com"
+msgstr ""
+
+#. Author of the plugin
+msgid "GutenGeek"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://gutengeek.com/contact"
+msgstr ""

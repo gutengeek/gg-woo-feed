@@ -1,0 +1,67 @@
+$primary: #2196F3;
+
+.gg_woo_feed-progress-container {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+.gg_woo_feed-progress-bar {
+  width: 100%;
+  background: #f1f1f1;
+}
+
+.gg_woo_feed-progress-bar-fill {
+  width: 0;
+  height: 18px;
+  display: block;
+  background-color: $primary;
+  border-radius: 3px;
+  transition: width 0.8s ease;
+  background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+}
+
+.gg_woo_feed-spinner {
+  animation: gg_woo_feed-spin 1000ms infinite linear;
+}
+
+@keyframes gg_woo_feed-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.gg_woo_feed-spinner-container {
+  float: left;
+  display: inline-block;
+  width: 5%;
+}
+
+.gg_woo_feed-spinner {
+  color: $primary;
+}
+
+.gg_woo_feed-progress-percentage {
+  float: right;
+  color: $primary;
+  width: 5%;
+  display: inline-block;
+}
+
+.gg_woo_feed-progress-status {
+  color: $primary;
+  display: inline-block;
+  width: 90%;
+  font-weight: 700;
+}
+
+.gg_woo_feed-redirect-message {
+  color: $primary;
+  font-weight: 700;
+}
