@@ -214,6 +214,8 @@ class Mapping {
 					}
 				}
 
+				// Handle main product ID in the end.
+				// Ignore main product ID if set off.
 				if ( 'on' !== $this->config['show_main_variable_product'] ) {
 					continue;
 				}
@@ -1478,23 +1480,97 @@ class Mapping {
 	 */
 	protected function image( $product ) {
 		if ( $product->is_type( 'variation' ) ) {
-			$getImage = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),
+			$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),
 				'full' );
-			if ( has_post_thumbnail( $product->get_id() ) && ! empty( $getImage[0] ) ) :
-				$image = ( $getImage[0] );
+			if ( has_post_thumbnail( $product->get_id() ) && ! empty( $get_image[0] ) ) :
+				$image = $get_image[0];
 			else :
-				$getImage = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
+				$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
 					'full' );
-				$image    = ( $getImage[0] );
+				$image    = $get_image[0];
 			endif;
 		} else {
-			if ( has_post_thumbnail( $product->get_id() ) ) :
-				$getImage = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),
-					'full' );
-				$image    = ( $getImage[0] );
-			else :
-				$image = ( wp_get_attachment_url( $product->get_id() ) );
-			endif;
+			if ( $product->is_type( 'variable' ) && $product->has_child() && ( 'price' === $this->config['feed_variable_image'] ) ) {
+
+				// For default variation.
+				if ( 'first' === $this->config['feed_variable_price'] ) {
+					$default_attributes = $this->get_default_attributes( $product );
+					$variation_id       = $this->find_matching_product_variation( $product, $default_attributes );
+
+					if ( $variation_id ) {
+						$product = wc_get_product( $variation_id );
+
+						$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),
+							'full' );
+						if ( has_post_thumbnail( $product->get_id() ) && ! empty( $get_image[0] ) ) :
+							$image = $get_image[0];
+						else :
+							$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
+								'full' );
+							$image    = $get_image[0];
+						endif;
+
+						return $image;
+					}
+				}
+
+				$visible_children = $product->get_visible_children();
+				if ( is_array( $visible_children ) && ( count( $visible_children ) > 0 ) ) {
+					$prices = [];
+					foreach ( $visible_children as $key => $child ) {
+						$price            = get_post_meta( $child, '_price', true );
+						$prices[ $child ] = $price;
+					}
+
+					if ( $prices ) {
+						if ( 'smallest' === $this->config['feed_variable_price'] ) {
+							$product_id = array_keys( $prices, min( $prices ) );
+							if ( $product_id && isset( $product_id[0] ) && $product_id[0] ) {
+								$product = wc_get_product( $product_id[0] );
+
+								$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),
+									'full' );
+								if ( has_post_thumbnail( $product->get_id() ) && ! empty( $get_image[0] ) ) :
+									$image = $get_image[0];
+								else :
+									$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
+										'full' );
+									$image    = $get_image[0];
+								endif;
+
+								return $image;
+							}
+						}
+
+						if ( 'biggest' === $this->config['feed_variable_price'] ) {
+							$product_id = array_keys( $prices, max( $prices ) );
+							if ( $product_id && isset( $product_id[0] ) && $product_id[0] ) {
+								$product = wc_get_product( $product_id[0] );
+
+								$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),
+									'full' );
+								if ( has_post_thumbnail( $product->get_id() ) && ! empty( $get_image[0] ) ) :
+									$image = $get_image[0];
+								else :
+									$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
+										'full' );
+									$image    = $get_image[0];
+								endif;
+
+								return $image;
+							}
+						}
+					}
+				}
+			} else {
+				if ( has_post_thumbnail( $product->get_id() ) ) :
+					$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),
+						'full' );
+					$image    = $get_image[0];
+				else :
+					$image = ( wp_get_attachment_url( $product->get_id() ) );
+				endif;
+			}
 		}
 
 		return $image;

@@ -151,6 +151,8 @@ if ( ! function_exists( 'gg_woo_feed_parse_feed_queries' ) ) {
 			'feed_variable_price'           => 'smallest',
 			'feed_variable_attr'            => 'all',
 			'feed_variable_title'           => 'default',
+			'feed_variable_image'           => 'price',
+			// 'use_default_variation'         => 'off',
 			'include_additional_image_link' => 'on',
 			'variable_quantity'             => 'first',
 			// Filter
@@ -260,6 +262,7 @@ function gg_woo_feed_sanitize_data_option( $data ) {
 		'exclude_variations',
 		'show_main_variable_product',
 		'include_additional_image_link',
+		// 'use_default_variation',
 	];
 
 	foreach ( $checkboxes as $checkbox ) {
@@ -268,8 +271,8 @@ function gg_woo_feed_sanitize_data_option( $data ) {
 		}
 	}
 
-	if ( isset( $data[ 'custom_path' ] ) ) {
-		$data[ 'custom_path' ] = sanitize_file_name( $data[ 'custom_path' ] );
+	if ( isset( $data['custom_path'] ) ) {
+		$data['custom_path'] = sanitize_file_name( $data['custom_path'] );
 	}
 
 	return $data;
@@ -583,7 +586,8 @@ function gg_woo_feed_regenerate_bulk_feeds() {
 
 add_action( 'gg_woo_feed_update', 'gg_woo_feed_regenerate_bulk_feeds' );
 
-function gg_woo_feed_do_this_generate($option_name) {
+function gg_woo_feed_do_this_generate( $option_name ) {
 	Generate_Wizard::do_this_generate( $option_name );
 }
+
 add_action( 'gg_woo_feed_generate_feed', 'gg_woo_feed_do_this_generate', 10, 1 );

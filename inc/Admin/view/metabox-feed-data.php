@@ -161,6 +161,26 @@
                                         <p class="gg_woo_feed-description"><?php esc_html_e( 'Select a product title type for main variable product.', 'gg-woo-feed' ); ?></p>
                                     </div>
                                 </div>
+                                <div class="gg_woo_feed-field-wrap gg_woo_feed-select-field-wrap form-group " id="gg_woo_feed-form-feed_variable_image-wrap">
+                                    <label class="gg_woo_feed-label" for="gg_woo_feed-form-feed_variable_image"><?php esc_html_e( 'Main products image', 'gg-woo-feed' ); ?></label>
+                                    <div class="gg_woo_feed-field-main">
+			                            <?php
+			                            $variable_image_options = [
+				                            'default' => esc_html__( 'Default parent product image', 'gg-woo-feed' ),
+				                            'price'   => esc_html__( 'Based on `Main products price`', 'gg-woo-feed' ),
+			                            ];
+			                            ?>
+                                        <select name="feed_variable_image" id="gg_woo_feed-form-feed_variable_image">
+				                            <?php foreach ( $variable_image_options as $variable_image => $variable_image_label ) : ?>
+                                                <option <?php selected( $variable_image, isset( $feed_queries['feed_variable_image'] ) ? $feed_queries['feed_variable_image'] : 'price', true ); ?>
+                                                        value="<?php echo esc_attr( $variable_image ); ?>">
+						                            <?php echo esc_html( $variable_image_label ); ?>
+                                                </option>
+				                            <?php endforeach; ?>
+                                        </select>
+                                        <p class="gg_woo_feed-description"><?php esc_html_e( 'Select a product image type for main variable product.', 'gg-woo-feed' ); ?></p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="gg_woo_feed-general-data-section">
