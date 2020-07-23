@@ -298,7 +298,8 @@
 }
 
 .gg_woo_feed-del-row,
-.gg_woo_feed-del-condition {
+.gg_woo_feed-del-condition,
+.gg_woo_feed-del-condition-attributes {
   color: red;
   cursor: pointer;
 }
@@ -342,6 +343,28 @@
 }
 
 .gg_woo_feed-table-filter {
+  th:nth-child(1) {
+    width: 5%;
+  }
+
+  th:nth-child(2) {
+    width: 30%;
+  }
+
+  th:nth-child(3) {
+    width: 30%;
+  }
+
+  th:nth-child(4) {
+    width: 30%;
+  }
+
+  th:nth-child(5) {
+    width: 5%;
+  }
+}
+
+.gg_woo_feed-table-filter-attributes {
   th:nth-child(1) {
     width: 5%;
   }

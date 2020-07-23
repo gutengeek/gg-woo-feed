@@ -164,6 +164,12 @@ if ( ! function_exists( 'gg_woo_feed_parse_feed_queries' ) ) {
 			'feed_filter_product_type'      => [ 'simple', 'variable', 'grouped', 'external' ],
 			'exclude_variations'            => 'on',
 			'show_main_variable_product'    => 'on',
+			// Filter by attributes
+			'filter_by_attributes'          => 'off',
+			'filter_attribute_relationship' => 'and',
+			'filter_by_attributes_atts'     => [],
+			'conditions_attributes'         => [],
+			'condition_values_attributes'   => [],
 			// Advanced Filter
 			'filter_relationship'           => 'and',
 			'filter_atts'                   => [],
@@ -262,7 +268,7 @@ function gg_woo_feed_sanitize_data_option( $data ) {
 		'exclude_variations',
 		'show_main_variable_product',
 		'include_additional_image_link',
-		// 'use_default_variation',
+		'filter_by_attributes',
 	];
 
 	foreach ( $checkboxes as $checkbox ) {
@@ -574,6 +580,10 @@ if ( ! function_exists( 'gg_woo_feed_product_sale_statuses' ) ) {
 
 function gg_woo_feed_get_product_attribute_dropdown( $selected = '' ) {
 	return \GG_Woo_Feed\Common\Product_Attributes::get_attribute_dropdown( $selected );
+}
+
+function gg_woo_feed_get_wc_product_attribute_dropdown( $selected = '' ) {
+	return \GG_Woo_Feed\Common\Product_Attributes::get_wc_product_attribute_dropdown( $selected );
 }
 
 function gg_woo_feed_get_filter_condition_options() {

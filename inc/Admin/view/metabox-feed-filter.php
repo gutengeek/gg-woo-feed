@@ -161,7 +161,7 @@
                                     </div>
                                 </div>
                             </div>
-	                        <?php //require_once( GGWOOFEED_DIR . 'inc/Admin/view/filter-attributes.php' ); ?>
+	                        <?php require_once( GGWOOFEED_DIR . 'inc/Admin/view/filter-attributes.php' ); ?>
                         </div>
 
                         <div class="gg_woo_feed-tabs__content">

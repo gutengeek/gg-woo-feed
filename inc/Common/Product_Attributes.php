@@ -200,4 +200,25 @@ class Product_Attributes {
 
 		return $fields;
 	}
+
+	public static function get_wc_product_attribute_dropdown( $selected = '' ) {
+		$attribute_dropdown = wp_cache_get( 'gg_woo_feed_dropdown_wc_product_attributes' );
+
+		if ( false === $attribute_dropdown ) {
+			$wc_attributes = static::get_all_attributes();
+			if ( is_array( $wc_attributes ) && ! empty( $wc_attributes ) ) {
+				foreach ( $wc_attributes as $key => $value ) {
+					$attribute_dropdown .= sprintf( '<option value="%s">%s</option>', $key, $value );
+				}
+			}
+
+			wp_cache_set( 'gg_woo_feed_dropdown_wc_product_attributes', $attribute_dropdown );
+		}
+
+		if ( $selected && strpos( $attribute_dropdown, 'value="' . $selected . '"' ) !== false ) {
+			$attribute_dropdown = str_replace( 'value="' . $selected . '"', 'value="' . $selected . '"' . ' selected', $attribute_dropdown );
+		}
+
+		return $attribute_dropdown;
+	}
 }

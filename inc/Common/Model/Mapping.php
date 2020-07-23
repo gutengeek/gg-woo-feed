@@ -144,6 +144,39 @@ class Mapping {
 	public function query_products() {
 		$config = $this->get_config();
 
+		if ( 'on' === $config['filter_by_attributes'] && $config['filter_by_attributes_atts'] && $config['conditions_attributes'] && $config['condition_values_attributes'] ) {
+			$args = [
+				'post_type'   => 'product_variation',
+				'post_status' => 'publish',
+				'numberposts' => -1,
+			];
+
+			$args['meta_query']['relation'] = $this->get_filter_by_attributes_relationship();
+			foreach ( $config['filter_by_attributes_atts'] as $key => $attribute ) {
+				$attribute            = str_replace( [ Constant::PRODUCT_ATTR_PREFIX ], 'pa_', $attribute );
+				$args['meta_query'][] = [
+					'key'     => 'attribute_' . $attribute,
+					'value'   => $config['condition_values_attributes'][$key],
+					'compare' => '=', // $config['conditions_attributes'][$key]
+				];
+			}
+
+			$products = get_posts( $args );
+
+			return wp_list_pluck( $products, 'ID' );
+		}
+
+		return $this->query_wc_products();
+	}
+
+	/**
+	 * Get products
+	 *
+	 * @return array
+	 */
+	public function query_wc_products() {
+		$config = $this->get_config();
+
 		$args = apply_filters( 'gg_woo_feed_wc_product_query', [
 			'limit'            => $config['product_limit'] ? $config['product_limit'] : -1,
 			'status'           => $this->post_status,
@@ -376,8 +409,8 @@ class Mapping {
 
 		foreach ( $this->config['mattributes'] as $attr_key => $mattribute ) {
 			if ( 'image' === $mattribute ) {
-				$p_attribute = $this->config['attributes'][$attr_key];
-				$attr_value = $this->get_attr_value_by_type( $product, $p_attribute );
+				$p_attribute = $this->config['attributes'][ $attr_key ];
+				$attr_value  = $this->get_attr_value_by_type( $product, $p_attribute );
 
 				if ( ! $attr_value ) {
 					return false;
@@ -1487,7 +1520,7 @@ class Mapping {
 			else :
 				$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
 					'full' );
-				$image    = $get_image[0];
+				$image     = $get_image[0];
 			endif;
 		} else {
 			if ( $product->is_type( 'variable' ) && $product->has_child() && ( 'price' === $this->config['feed_variable_image'] ) ) {
@@ -1507,7 +1540,7 @@ class Mapping {
 						else :
 							$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
 								'full' );
-							$image    = $get_image[0];
+							$image     = $get_image[0];
 						endif;
 
 						return $image;
@@ -1535,7 +1568,7 @@ class Mapping {
 								else :
 									$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
 										'full' );
-									$image    = $get_image[0];
+									$image     = $get_image[0];
 								endif;
 
 								return $image;
@@ -1554,7 +1587,7 @@ class Mapping {
 								else :
 									$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_parent_id() ),
 										'full' );
-									$image    = $get_image[0];
+									$image     = $get_image[0];
 								endif;
 
 								return $image;
@@ -1566,7 +1599,7 @@ class Mapping {
 				if ( has_post_thumbnail( $product->get_id() ) ) :
 					$get_image = wp_get_attachment_image_src( get_post_thumbnail_id( $product->get_id() ),
 						'full' );
-					$image    = $get_image[0];
+					$image     = $get_image[0];
 				else :
 					$image = ( wp_get_attachment_url( $product->get_id() ) );
 				endif;
@@ -2677,5 +2710,23 @@ class Mapping {
 		}
 
 		return $filter_relationship;
+	}
+
+	/**
+	 * Return filter_relationship.
+	 *
+	 * @return string
+	 */
+	protected function get_filter_by_attributes_relationship() {
+		$filter_relationship = $this->config['filter_attribute_relationship'];
+		if ( ! isset( $filter_relationship ) ) {
+			return 'AND';
+		}
+
+		if ( ! in_array( $filter_relationship, [ 'and', 'or' ] ) ) {
+			return 'AND';
+		}
+
+		return strtoupper( $filter_relationship );
 	}
 }

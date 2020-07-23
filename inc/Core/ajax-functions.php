@@ -108,6 +108,61 @@ function gg_woo_feed_add_new_filter_condition() {
 add_action( 'wp_ajax_gg_woo_feed_add_new_filter_condition', 'gg_woo_feed_add_new_filter_condition' );
 
 /**
+ * Get template mapping via AJAX.
+ *
+ * @return void
+ */
+function gg_woo_feed_add_new_filter_by_attributes_condition() {
+	if ( ! current_user_can( 'manage_woocommerce' ) ) {
+		wp_send_json_error( esc_html__( 'Unauthorized Action.', 'gg-woo-feed' ) );
+		die();
+	}
+
+	try {
+		ob_start();
+
+		?>
+        <tr>
+            <td>
+                <i class="gg_woo_feed-sort dashicons dashicons-move"></i>
+            </td>
+            <td>
+                <select name="filter_by_attributes_atts[]" required>
+					<?php print gg_woo_feed_get_wc_product_attribute_dropdown( '' ); ?>
+                </select>
+            </td>
+
+			<?php $condition_attributes_options = gg_woo_feed_get_filter_condition_options(); ?>
+            <td>
+                <select name="conditions_attributes[]" class="attr_type gg_woo_feed-not-empty">
+					<?php foreach ( $condition_attributes_options as $a_condition => $a_condition_label ) : ?>
+                        <option value="<?php echo esc_attr( $a_condition ); ?>"><?php echo esc_html( $a_condition_label ); ?></option>
+					<?php endforeach; ?>
+                </select>
+            </td>
+            <td>
+                <input type="text" name="condition_values_attributes[]">
+            </td>
+            <td>
+                <i class="gg_woo_feed-del-condition-attributes dashicons dashicons-no-alt"></i>
+            </td>
+        </tr>
+		<?php
+
+		wp_send_json_success( [
+			'row' => ob_get_clean(),
+		], 200 );
+		wp_die();
+	} catch ( \Exception $e ) {
+		wp_send_json_error( [
+			'message' => $e->getMessage(),
+		], 400 );
+	}
+}
+
+add_action( 'wp_ajax_gg_woo_feed_add_new_filter_by_attributes_condition', 'gg_woo_feed_add_new_filter_by_attributes_condition' );
+
+/**
  * Save config via AJAX.
  */
 function gg_woo_feed_save_config() {

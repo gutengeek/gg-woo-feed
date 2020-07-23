@@ -19,7 +19,7 @@ $has_condition = isset( $feed_queries['filter_atts'] ) && count( $feed_queries['
 		?>
         <select name="filter_relationship" id="gg_woo_feed-form-filter_relationship" style="width: 200px">
 			<?php foreach ( $relationship_options as $relationship_attr => $relationship_attr_label ) : ?>
-                <option <?php selected( $relationship_attr, isset( $feed_queries['filter_relationship'] ) ? $feed_queries['filter_relationship'] : 'all', true ); ?>
+                <option <?php selected( $relationship_attr, isset( $feed_queries['filter_relationship'] ) ? $feed_queries['filter_relationship'] : 'and', true ); ?>
                         value="<?php echo esc_attr( trim( $relationship_attr ) ); ?>">
 					<?php echo esc_html( $relationship_attr_label ); ?>
                 </option>

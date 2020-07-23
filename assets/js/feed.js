@@ -17,6 +17,10 @@
         GG_Woo_Feed_Feed.delete_filter_condition();
         GG_Woo_Feed_Feed.condition_sortable_init();
         GG_Woo_Feed_Feed.no_conditions();
+        GG_Woo_Feed_Feed.add_new_filter_by_attributes_condition();
+        GG_Woo_Feed_Feed.delete_filter_by_attributes_condition();
+        GG_Woo_Feed_Feed.attributes_condition_sortable_init();
+        GG_Woo_Feed_Feed.no_attributes_conditions();
         GG_Woo_Feed_Feed.utils();
       },
       sortable_init: function sortable_init() {
@@ -471,23 +475,78 @@
           $('.gg_woo_feed-no-conditions').show();
         }
       },
+      add_new_filter_by_attributes_condition: function add_new_filter_by_attributes_condition() {
+        var condition_cache = '';
+        $('#gg_woo_feed-add-new-condition-attribites').on('click', function (e) {
+          e.preventDefault();
+          var $filter_body = $('#gg_woo_feed-table-filter-attributes tbody');
+
+          if (condition_cache) {
+            $filter_body.append(condition_cache);
+            GG_Woo_Feed_Feed.no_attributes_conditions();
+            GG_Woo_Feed_Feed.attributes_condition_sortable_init();
+          } else {
+            $.ajax({
+              url: ajaxurl,
+              method: 'POST',
+              data: {
+                action: 'gg_woo_feed_add_new_filter_by_attributes_condition'
+              }
+            }).always(function () {}).done(function (res) {
+              $filter_body.append(res.data.row);
+              condition_cache = res.data.row;
+              GG_Woo_Feed_Feed.no_attributes_conditions();
+              GG_Woo_Feed_Feed.attributes_condition_sortable_init();
+            }).fail(function (err) {});
+          }
+        });
+      },
+      delete_filter_by_attributes_condition: function delete_filter_by_attributes_condition() {
+        $(document).on('click', '.gg_woo_feed-del-condition-attributes', function (e) {
+          e.preventDefault();
+          $(this).closest('tr').remove();
+          GG_Woo_Feed_Feed.no_attributes_conditions();
+          GG_Woo_Feed_Feed.attributes_condition_sortable_init();
+        });
+      },
+      attributes_condition_sortable_init: function attributes_condition_sortable_init() {
+        var $table_body = $('.gg_woo_feed-table-filter-attributes tbody');
+
+        if ($table_body.length) {
+          $table_body.sortable({
+            cursor: 'move'
+          }).disableSelection();
+        }
+      },
+      no_attributes_conditions: function no_attributes_conditions(e) {
+        var no_conditions = $('#gg_woo_feed-table-filter-attributes tbody tr:not(.gg_woo_feed-no-conditions_attributes)').length;
+
+        if (no_conditions >= 1) {
+          $('.gg_woo_feed-no-conditions_attributes').hide();
+        } else {
+          $('.gg_woo_feed-no-conditions_attributes').show();
+        }
+      },
       utils: function utils(e) {
         $(document).ready(function () {
-          var $use_default_variation = $('[name="use_default_variation"]');
-          use_default_variable($use_default_variation);
-          $use_default_variation.change(function () {
+          var $filter_by_attributes = $('[name="filter_by_attributes"]');
+          use_filter_by_attributes($filter_by_attributes);
+          $filter_by_attributes.change(function () {
             var $el = $(this);
-            use_default_variable($el);
+            use_filter_by_attributes($el);
           });
         });
 
-        function use_default_variable($el) {
-          var $depend = $('#gg_woo_feed-form-feed_variable_price-wrap,' + ' #gg_woo_feed-form-feed_variable_attr-wrap,' + ' #gg_woo_feed-form-feed_variable_title-wrap');
+        function use_filter_by_attributes($el) {
+          var $depend = $('.filter_by_attributes_section');
+          var $ex_depend = $('#gg_woo_feed-select-product_type, #gg_woo_feed-form-exclude_variations-wrap,' + ' #gg_woo_feed-form-show_main_variable_product-wrap');
 
           if ($el.prop('checked')) {
-            $depend.hide();
-          } else {
             $depend.show();
+            $ex_depend.hide();
+          } else {
+            $depend.hide();
+            $ex_depend.show();
           }
         }
       }
