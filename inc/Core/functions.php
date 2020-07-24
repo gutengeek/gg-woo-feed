@@ -590,6 +590,10 @@ function gg_woo_feed_get_filter_condition_options() {
 	return Dropdown::get_filter_conditions();
 }
 
+function gg_woo_feed_get_meta_query_condition_options() {
+	return Dropdown::get_meta_query_conditions();
+}
+
 function gg_woo_feed_regenerate_bulk_feeds() {
 	Generate_Wizard::regenerate_bulk_feeds();
 }

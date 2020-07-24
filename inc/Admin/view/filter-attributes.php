@@ -6,47 +6,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
 
-// $products = get_posts( [
-// 	'post_type'   => 'product_variation',
-// 	'post_status' => 'publish',
-// 	'numberposts' => -1,
-// 	'meta_query'  => [
-// 	        'relation' => 'OR',
-// 		[
-// 			'key'   => 'attribute_pa_color',
-// 			'value' => 'green',
-// 		],
-// 		[
-// 			'key'   => 'attribute_pa_size',
-// 			'value' => 'large',
-// 		],
-// 	],
-// 	// 'meta_query'  => [
-// 	// 	[
-// 	// 		'taxonomy' => 'product_visibility',
-// 	// 		'field'    => 'slug',
-// 	// 		'terms'    => 'exclude-from-catalog',
-// 	// 		'operator' => 'NOT IN',
-// 	// 	],
-// 	// ],
-// 	// 'tax_query'   => [
-// 	// 	[
-// 	// 		'taxonomy' => 'pa_color',
-// 	// 		'field'    => 'slug',
-// 	// 		'terms'    => [ 'blue' ],
-// 	// 		'operator' => 'IN',
-// 	// 	],
-// 	// 	[
-// 	// 		'taxonomy' => 'pa_color',
-// 	// 		'field'    => 'slug',
-// 	// 		'terms'    => [ 'green' ],
-// 	// 		'operator' => 'IN',
-// 	// 	],
-// 	// ],
-// ] );
-//
-// var_dump( wp_list_pluck( $products, 'ID' ) );
-
 $has_condition_attributes = isset( $feed_queries['filter_by_attributes_atts'] ) && count( $feed_queries['filter_by_attributes_atts'] ) > 0;
 ?>
 <div class="gg_woo_feed-field-wrap gg_woo_feed-switch-field-wrap form-group " id="gg_woo_feed-form-filter_by_attributes-wrap">
@@ -61,6 +20,7 @@ $has_condition_attributes = isset( $feed_queries['filter_by_attributes_atts'] ) 
 				'gg-woo-feed' ); ?></label>
     </div>
 </div>
+<p class="gg_woo_feed-description"><?php esc_html_e( 'The filter by product attributes feature will take variation products only.', 'gg-woo-feed' ); ?></p>
 <div class="filter_by_attributes_section">
     <div class="gg_woo_feed-field-wrap gg_woo_feed-select-field-wrap form-group " id="gg_woo_feed-form-filter_attribute_relationship-wrap">
         <label class="gg_woo_feed-label" for="gg_woo_feed-form-filter_attribute_relationship" style="width: 15%"><?php esc_html_e( 'Relationship Conditions', 'gg-woo-feed' ); ?></label>
@@ -112,7 +72,7 @@ $has_condition_attributes = isset( $feed_queries['filter_by_attributes_atts'] ) 
                         </select>
                     </td>
 
-					<?php $condition_attributes_options = gg_woo_feed_get_filter_condition_options(); ?>
+					<?php $condition_attributes_options = gg_woo_feed_get_meta_query_condition_options(); ?>
                     <td>
                         <select name="conditions_attributes[]" class="attr_type gg_woo_feed-not-empty">
 							<?php foreach ( $condition_attributes_options as $a_condition => $a_condition_label ) : ?>

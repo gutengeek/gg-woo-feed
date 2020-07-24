@@ -132,7 +132,7 @@ function gg_woo_feed_add_new_filter_by_attributes_condition() {
                 </select>
             </td>
 
-			<?php $condition_attributes_options = gg_woo_feed_get_filter_condition_options(); ?>
+			<?php $condition_attributes_options = gg_woo_feed_get_meta_query_condition_options(); ?>
             <td>
                 <select name="conditions_attributes[]" class="attr_type gg_woo_feed-not-empty">
 					<?php foreach ( $condition_attributes_options as $a_condition => $a_condition_label ) : ?>

@@ -418,4 +418,19 @@ class Dropdown {
 			'<='          => esc_html__( 'less or equal to', 'gg-woo-feed' ),
 		];
 	}
+
+	public static function get_meta_query_conditions() {
+		return [
+			'='        => esc_html__( 'equal', 'gg-woo-feed' ),
+			'!='       => esc_html__( 'not equal', 'gg-woo-feed' ),
+			'>'        => esc_html__( 'greater than', 'gg-woo-feed' ),
+			'>='       => esc_html__( 'greater than or equal to', 'gg-woo-feed' ),
+			'<'        => esc_html__( 'less than', 'gg-woo-feed' ),
+			'<='       => esc_html__( 'less or equal to', 'gg-woo-feed' ),
+			'LIKE'     => esc_html__( 'like', 'gg-woo-feed' ),
+			'NOT LIKE' => esc_html__( 'not like', 'gg-woo-feed' ),
+			'IN'       => esc_html__( 'in', 'gg-woo-feed' ),
+			'NOT IN'   => esc_html__( 'not in', 'gg-woo-feed' ),
+		];
+	}
 }

@@ -1,6 +1,7 @@
 <?php
 namespace GG_Woo_Feed\Common\Model;
 
+use GG_Woo_Feed\Common\Dropdown;
 use Jetpack;
 use Jetpack_Photon;
 use GG_Woo_Feed\Core\Constant;
@@ -145,25 +146,7 @@ class Mapping {
 		$config = $this->get_config();
 
 		if ( 'on' === $config['filter_by_attributes'] && $config['filter_by_attributes_atts'] && $config['conditions_attributes'] && $config['condition_values_attributes'] ) {
-			$args = [
-				'post_type'   => 'product_variation',
-				'post_status' => 'publish',
-				'numberposts' => -1,
-			];
-
-			$args['meta_query']['relation'] = $this->get_filter_by_attributes_relationship();
-			foreach ( $config['filter_by_attributes_atts'] as $key => $attribute ) {
-				$attribute            = str_replace( [ Constant::PRODUCT_ATTR_PREFIX ], 'pa_', $attribute );
-				$args['meta_query'][] = [
-					'key'     => 'attribute_' . $attribute,
-					'value'   => $config['condition_values_attributes'][$key],
-					'compare' => '=', // $config['conditions_attributes'][$key]
-				];
-			}
-
-			$products = get_posts( $args );
-
-			return wp_list_pluck( $products, 'ID' );
+			return $this->query_by_attributes();
 		}
 
 		return $this->query_wc_products();
@@ -210,6 +193,58 @@ class Mapping {
 		$query = new \WC_Product_Query( $args );
 
 		return $query->get_products();
+	}
+
+	/**
+	 * Query by attributes.
+	 *
+	 * @return array
+	 */
+	public function query_by_attributes() {
+		$config = $this->get_config();
+
+		if ( 'on' !== $config['filter_by_attributes'] || ! $config['filter_by_attributes_atts'] || ! $config['conditions_attributes'] || ! $config['condition_values_attributes'] ) {
+			return [];
+		}
+
+		$args = [
+			'post_type'   => 'product_variation',
+			'post_status' => 'publish',
+			'numberposts' => $config['product_limit'] ? $config['product_limit'] : -1,
+		];
+
+		if ( 'on' !== $config['feed_category_all'] && $config['feed_category'] ) {
+			$args['post_parent__in'] = $this->get_variation_parent_ids_from_term( (array) $config['feed_category'], 'product_cat', 'slug' );
+		}
+
+		// Sale Status
+		if ( $config['feed_filter_sale'] === 'sale' ) {
+			$args['post__in'] = array_merge( [ 0 ], wc_get_product_ids_on_sale() );
+		} elseif ( $config['feed_filter_sale'] === 'notsale' ) {
+			$args['post__not_in'] = array_merge( [ 0 ], wc_get_product_ids_on_sale() );
+		}
+
+		$args['meta_query']['relation'] = $this->get_filter_by_attributes_relationship();
+		foreach ( $config['filter_by_attributes_atts'] as $key => $attribute ) {
+			$attribute            = str_replace( [ Constant::PRODUCT_ATTR_PREFIX ], 'pa_', $attribute );
+			$args['meta_query'][] = [
+				'key'     => 'attribute_' . $attribute,
+				'value'   => $this->parse_meta_query_value( $config['condition_values_attributes'][ $key ], $config['conditions_attributes'][ $key ] ),
+				'compare' => $this->parse_meta_query_condition( $config['conditions_attributes'][ $key ] ),
+			];
+		}
+
+		// Stock Status
+		if ( $config['feed_filter_stock'] && in_array( $config['feed_filter_stock'], [ 'instock', 'outofstock' ] ) ) {
+			$args['meta_query'][] = [
+				'key'   => '_stock_status',
+				'value' => $config['feed_filter_stock'],
+			];
+		}
+
+		$products = get_posts( $args );
+
+		return wp_list_pluck( $products, 'ID' );
 	}
 
 	/**
@@ -2728,5 +2763,61 @@ class Mapping {
 		}
 
 		return strtoupper( $filter_relationship );
+	}
+
+	/**
+	 * @param array  $term
+	 * @param string $taxonomy
+	 * @param string $type
+	 * @return array
+	 */
+	protected function get_variation_parent_ids_from_term( $term, $taxonomy, $type ) {
+		global $wpdb;
+
+		return $wpdb->get_col( "
+        SELECT DISTINCT p.ID
+        FROM {$wpdb->prefix}posts as p
+        INNER JOIN {$wpdb->prefix}posts as p2 ON p2.post_parent = p.ID
+        INNER JOIN {$wpdb->prefix}term_relationships as tr ON p.ID = tr.object_id
+        INNER JOIN {$wpdb->prefix}term_taxonomy as tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
+        INNER JOIN {$wpdb->prefix}terms as t ON tt.term_id = t.term_id
+        WHERE p.post_type = 'product'
+        AND p.post_status = 'publish'
+        AND p2.post_status = 'publish'
+        AND tt.taxonomy = '$taxonomy'
+        AND t.$type IN ( '" . implode( "','", $term ) . "' )
+    " );
+	}
+
+	/**
+	 * Parse meta query value.
+	 *
+	 * @param $value
+	 * @param $condition
+	 * @return array|string
+	 */
+	protected function parse_meta_query_value( $value, $condition ) {
+		$condition = $this->parse_meta_query_condition( $condition );
+
+		if ( in_array( $condition, [ 'IN', 'NOT IN' ] ) ) {
+			$value = explode( ',', $value );
+			$value = array_map( 'trim', $value );
+		}
+
+		return $value;
+	}
+
+	/**
+	 * Parse meta query condition.
+	 *
+	 * @param $condition
+	 * @return string
+	 */
+	protected function parse_meta_query_condition( $condition ) {
+		if ( ! in_array( $condition, array_keys( Dropdown::get_meta_query_conditions() ) ) ) {
+			return '=';
+		}
+
+		return strtoupper( sanitize_text_field( $condition ) );
 	}
 }
