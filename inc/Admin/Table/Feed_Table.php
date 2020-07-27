@@ -15,6 +15,7 @@ class Feed_Table extends \WP_List_Table {
 			'cb'           => '<input type="checkbox" />',
 			'enable'       => __( 'Auto Update', 'gg-woo-feed' ),
 			'title'        => __( 'Feed Name', 'gg-woo-feed' ),
+			// 'count'        => __( 'Count Products', 'gg-woo-feed' ),
 			'provider'     => __( 'Provider', 'gg-woo-feed' ),
 			'type'         => __( 'Type', 'gg-woo-feed' ),
 			'cats'         => __( 'Categories', 'gg-woo-feed' ),
@@ -68,6 +69,10 @@ class Feed_Table extends \WP_List_Table {
 			$item['option_name'],
 			$this->row_actions( $actions )
 		);
+	}
+
+	public function column_count( $item ) {
+		return '---';
 	}
 
 	public function column_enable( $item ) {

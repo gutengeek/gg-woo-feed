@@ -192,7 +192,61 @@ class Mapping {
 		$args  = apply_filters( 'gg_woo_feed_product_query_args', $args );
 		$query = new \WC_Product_Query( $args );
 
-		return $query->get_products();
+		$product_ids = $query->get_products();
+		$result = [];
+		if ( $product_ids ) {
+			foreach ( $product_ids as $key => $pid ) {
+				$product = wc_get_product( $pid );
+
+				// Skip for invalid products
+				if ( ! is_object( $product ) ) {
+					continue;
+				}
+
+				// Skip for invisible products
+				if ( ! $product->is_visible() ) {
+					continue;
+				}
+
+				// Apply variable and variation settings
+				if ( $product->is_type( 'variable' ) && $product->has_child() ) {
+					if ( 'on' === $config['show_main_variable_product'] ) {
+						if ( $this->is_allowed( $product ) ) {
+							$result[] = $product->get_id();
+						}
+					}
+
+					if ( 'on' !== $config['exclude_variations'] ) {
+						$variations = $product->get_visible_children();
+						if ( is_array( $variations ) && ( count( $variations ) > 0 ) ) {
+							foreach ( $variations as $variation_id ) {
+								$variation_product = wc_get_product( $variation_id );
+
+								// Skip for invalid products
+								if ( ! is_object( $variation_product ) ) {
+									continue;
+								}
+
+								// Skip for invisible products
+								if ( ! $variation_product->is_visible() ) {
+									continue;
+								}
+
+								if ( $this->is_allowed( $variation_product ) ) {
+									$result[] = $variation_product->get_id();
+								}
+							}
+						}
+					}
+				} else {
+					if ( $this->is_allowed( $product ) ) {
+						$result[] = $product->get_id();
+					}
+				}
+			}
+		}
+
+		return $result;
 	}
 
 	/**
@@ -272,26 +326,26 @@ class Mapping {
 				continue;
 			}
 
-			// Apply variable and variation settings
-			if ( $product->is_type( 'variable' ) && $product->has_child() ) {
-				if ( 'on' !== $this->config['exclude_variations'] ) {
-					$this->pi++;
-					$variations = $product->get_visible_children();
-					if ( is_array( $variations ) && ( count( $variations ) > 0 ) ) {
-						$this->get_products( $variations );
-					}
-				}
-
-				// Handle main product ID in the end.
-				// Ignore main product ID if set off.
-				if ( 'on' !== $this->config['show_main_variable_product'] ) {
-					continue;
-				}
-			}
-
-			if ( ! $this->is_allowed( $product ) ) {
-				continue;
-			}
+			// // Apply variable and variation settings
+			// if ( $product->is_type( 'variable' ) && $product->has_child() ) {
+			// 	if ( 'on' !== $this->config['exclude_variations'] ) {
+			// 		$this->pi++;
+			// 		$variations = $product->get_visible_children();
+			// 		if ( is_array( $variations ) && ( count( $variations ) > 0 ) ) {
+			// 			$this->get_products( $variations );
+			// 		}
+			// 	}
+			//
+			// 	// Handle main product ID in the end.
+			// 	// Ignore main product ID if set off.
+			// 	if ( 'on' !== $this->config['show_main_variable_product'] ) {
+			// 		continue;
+			// 	}
+			// }
+			//
+			// if ( ! $this->is_allowed( $product ) ) {
+			// 	continue;
+			// }
 
 			// Add Single item wrapper before product info loop start
 			if ( 'xml' === $this->config['feed_type'] ) {
