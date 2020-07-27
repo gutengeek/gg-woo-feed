@@ -297,8 +297,30 @@ class Mapping {
 		}
 
 		$products = get_posts( $args );
+		$product_ids = wp_list_pluck( $products, 'ID' );
+		$result = [];
 
-		return wp_list_pluck( $products, 'ID' );
+		if ( $product_ids ) {
+			foreach ( $product_ids as $key => $pid ) {
+				$product = wc_get_product( $pid );
+
+				// Skip for invalid products
+				if ( ! is_object( $product ) ) {
+					continue;
+				}
+
+				// Skip for invisible products
+				if ( ! $product->is_visible() ) {
+					continue;
+				}
+
+				if ( $this->is_allowed( $product ) ) {
+					$result[] = $product->get_id();
+				}
+			}
+		}
+
+		return $result;
 	}
 
 	/**
