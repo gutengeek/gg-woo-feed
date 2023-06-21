@@ -189,7 +189,19 @@ class Mapping {
 		// Product Type.
 		$args['type'] = $config['feed_filter_product_type'] ? $config['feed_filter_product_type'] : [ 'simple', 'variable', 'grouped', 'external' ];
 
+		// Date Query
+		if ( isset($config['filter_by_date']) && $config['filter_by_date'] == 'on' ) {
+			if ( isset($config['filter_date_start']) && $config['filter_date_start']) {
+				$args['date_query']['after'] = $config['filter_date_start'];
+			}
+			if ( isset($config['filter_date_end']) && $config['filter_date_end']) {
+				$args['date_query']['before'] = $config['filter_date_end'];
+			}
+			$args['date_query']['inclusive'] = true;
+		}
+
 		$args  = apply_filters( 'gg_woo_feed_product_query_args', $args );
+		
 		$query = new \WC_Product_Query( $args );
 
 		return $query->get_products();
@@ -240,6 +252,17 @@ class Mapping {
 				'key'   => '_stock_status',
 				'value' => $config['feed_filter_stock'],
 			];
+		}
+
+		// Date Query
+		if ( isset($config['filter_by_date']) && $config['filter_by_date'] == 'on' ) {
+			if ( isset($config['filter_date_start']) && $config['filter_date_start']) {
+				$args['date_query']['after'] = $config['filter_date_start'];
+			}
+			if ( isset($config['filter_date_end']) && $config['filter_date_end']) {
+				$args['date_query']['before'] = $config['filter_date_end'];
+			}
+			$args['date_query']['inclusive'] = true;
 		}
 
 		$products = get_posts( $args );
