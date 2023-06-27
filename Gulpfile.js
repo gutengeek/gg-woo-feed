@@ -17,6 +17,10 @@ const browserSync  = require('browser-sync').create()
 const del          = require('del')
 const map          = require('lodash.map')
 const pkg          = require('./package.json')
+const merge        = require("merge-stream")
+const fs           = require('fs')
+const dummyDir     = './dummy_data'
+const dummyPlgDir  = './dummy_data/'+pkg.name
 
 const rollupConfig = () => {
     const resolve  = require('rollup-plugin-node-resolve')
@@ -103,6 +107,45 @@ gulp.task('clean', () => {
     ])
 })
 
+gulp.task('dummy:main', () => {
+    return merge([
+        gulp.src('*.php')
+            .pipe(debug())
+            .pipe(gulp.dest('dummy_data/'+pkg.name+'/trunk')),
+        gulp.src('*.txt')
+            .pipe(debug())
+            .pipe(gulp.dest('dummy_data/'+pkg.name+'/trunk')),
+        gulp.src('*.html')
+            .pipe(debug())
+            .pipe(gulp.dest('dummy_data/'+pkg.name+'/trunk'))
+    ]);
+})
+
+gulp.task('dummy:assets', () => {
+    return gulp.src('assets/**/*')
+            .pipe(debug())
+            .pipe(gulp.dest('dummy_data/'+pkg.name+'/trunk/assets'));
+})
+
+gulp.task('dummy:inc', () => {
+    return gulp.src('inc/**/*')
+            .pipe(debug())
+            .pipe(gulp.dest('dummy_data/'+pkg.name+'/trunk/inc'));
+})
+
+gulp.task('dummy:languages', () => {
+    return gulp.src('languages/**/*')
+            .pipe(debug())
+            .pipe(gulp.dest('dummy_data/'+pkg.name+'/trunk/languages'));
+})
+
+gulp.task('dummy:vendor', () => {
+    return gulp.src('vendor/**/*')
+            .pipe(debug())
+            .pipe(gulp.dest('dummy_data/'+pkg.name+'/trunk/vendor'));
+})
+
+
 gulp.task('watch', () => {
     browserSync.init({
         open: false,
@@ -113,8 +156,19 @@ gulp.task('watch', () => {
     gulp.watch('src/sass/admin/components/*.scss', gulp.series(['scss']))
     gulp.watch('src/js/admin/**/*.js', gulp.series(['babel']))
     gulp.watch('src/js/admin/*.js', gulp.series(['babel']))
+    
+    if (fs.existsSync(dummyPlgDir)) {
+        gulp.watch(['*.php', '*.txt', '*.html'], gulp.series(['dummy:main']))
+        gulp.watch('assets/', gulp.series(['dummy:assets']))
+        gulp.watch('inc/', gulp.series(['dummy:inc']))
+        gulp.watch('languages/', gulp.series(['dummy:languages']))
+        gulp.watch('vendor/', gulp.series(['dummy:vendor']))
+    }
+
 })
 
 gulp.task('js', gulp.series(['babel', 'minify:js']))
 gulp.task('css', gulp.series(['scss', 'minify:css']))
 gulp.task('default', gulp.series(['clean', 'css', 'js', 'i18n']))
+
+gulp.task('dummy', gulp.series(['dummy:main', 'dummy:assets', 'dummy:inc', 'dummy:languages', 'dummy:vendor']))
