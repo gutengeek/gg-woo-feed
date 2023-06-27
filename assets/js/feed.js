@@ -312,9 +312,9 @@
                 document.getElementById('countdowntimer').textContent = timeleft;
                 if (timeleft <= 0) clearInterval(downloadTimer);
               }, 1000);
-              // setTimeout(function () {
-              //   window.location.href = ggWooFeed.manage_feeds_link;
-              // }, 5000);
+              setTimeout(function () {
+                window.location.href = ggWooFeed.manage_feeds_link;
+              }, 5000);
             }
           }).fail(function (err) {
             set_progress_status(err.responseJSON.data.message);
@@ -535,9 +535,9 @@
             var $el = $(this);
             use_filter_by_attributes($el);
           });
-
           $('#gg_woo_feed-form-filter_by_date').change(function () {
-            var $depend = $('.filter_by_date_section');  
+            var $depend = $('.filter_by_date_section');
+
             if ($(this).prop('checked')) {
               $depend.show();
             } else {

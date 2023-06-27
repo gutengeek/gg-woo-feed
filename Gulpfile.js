@@ -157,13 +157,13 @@ gulp.task('watch', () => {
     gulp.watch('src/js/admin/**/*.js', gulp.series(['babel']))
     gulp.watch('src/js/admin/*.js', gulp.series(['babel']))
     
-    if (fs.existsSync(dummyPlgDir)) {
-        gulp.watch(['*.php', '*.txt', '*.html'], gulp.series(['dummy:main']))
-        gulp.watch('assets/', gulp.series(['dummy:assets']))
-        gulp.watch('inc/', gulp.series(['dummy:inc']))
-        gulp.watch('languages/', gulp.series(['dummy:languages']))
-        gulp.watch('vendor/', gulp.series(['dummy:vendor']))
-    }
+    // if (fs.existsSync(dummyPlgDir)) {
+    //     gulp.watch(['*.php', '*.txt', '*.html'], gulp.series(['dummy:main']))
+    //     gulp.watch('assets/', gulp.series(['dummy:assets']))
+    //     gulp.watch('inc/', gulp.series(['dummy:inc']))
+    //     gulp.watch('languages/', gulp.series(['dummy:languages']))
+    //     gulp.watch('vendor/', gulp.series(['dummy:vendor']))
+    // }
 
 })
 

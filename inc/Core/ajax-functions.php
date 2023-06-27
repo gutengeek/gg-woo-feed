@@ -206,14 +206,14 @@ function gg_woo_feed_save_config() {
     if ( $feed_option_name ) {
     	$current_file_name = isset( $_POST['current_file_name'] ) ? sanitize_text_field( $_POST['current_file_name'] ) : '';
     	if ( sanitize_file_name( $_POST['filename'] ) !== $current_file_name ) {
-		    if ( $file_exist ) {
+		    if ( $file_exist && ! isset( $_POST['is_edit'] ) ) {
 			    wp_send_json_error( [
 				    'message' => __( 'File Name is already exist. Please enter other.', 'gg-woo-feed' ),
 			    ], 400 );
 		    }
 	    }
     } else {
-	    if ( $file_exist ) {
+	    if ( $file_exist && ! isset( $_POST['is_edit'] ) ) {
 		    wp_send_json_error( [
 			    'message' => __( 'File Name is already exist. Please enter other.', 'gg-woo-feed' ),
 		    ], 400 );

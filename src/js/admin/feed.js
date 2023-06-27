@@ -560,6 +560,16 @@
           var $el = $( this );
           use_filter_by_attributes( $el );
         } );
+
+        $('#gg_woo_feed-form-filter_by_date').change(function () {
+          var $depend = $('.filter_by_date_section');
+
+          if ($(this).prop('checked')) {
+            $depend.show();
+          } else {
+            $depend.hide();
+          }
+        });
       } );
 
       function use_filter_by_attributes( $el ) {

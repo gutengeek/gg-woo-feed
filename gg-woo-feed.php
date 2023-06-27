@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       GG Woo Feed
+ * Plugin Name:       GTG Product Feed for Shopping
  * Plugin URI:        https://gutengeek.com
  * Description:       GG Woo Feed helps you make feeds with WooCommerce to connect to popular providers: Google, Facebook, Printerst.
- * Version:           1.2.1
+ * Version:           1.2.4
  * Author:            GutenGeek
  * Author URI:        https://gutengeek.com/contact
  * License:           GPL-2.0+
@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Define Constants
  */
 define( 'GGWOOFEED', 'gg-woo-feed' );
-define( 'GGWOOFEED_VERSION', '1.2.1' );
+define( 'GGWOOFEED_VERSION', '1.2.4' );
 define( 'GGWOOFEED_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GGWOOFEED_URL', plugin_dir_url( __FILE__ ) );
 define( 'GGWOOFEED_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
