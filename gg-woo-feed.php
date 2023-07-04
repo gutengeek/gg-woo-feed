@@ -10,8 +10,9 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       gg-woo-feed
  * Domain Path:       /languages
- * WC requires at least: 3.6
- * WC tested up to: 3.9.3
+ * Tested up to: 6.2
+ * WC requires at least: 4.4
+ * WC tested up to: 7.8
  */
 
 // If this file is called directly, abort.

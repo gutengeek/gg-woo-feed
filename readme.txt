@@ -2,7 +2,7 @@
 Contributors: gutengeek, ndoublehwp
 Tags: WooCommerce Feed, Product Feed, WooCommerce Google Merchant, Google Shopping, Google Shopping Feed, WooCommerce Product Feed, Facebook Product Feed, XML product feed, CSV Product Feed, TXT Product Feed,  XML CSV TXT product feed
 Requires at least: 4.9
-Tested up to: 5.4
+Tested up to: 6.2
 Requires PHP: 5.6
 Stable tag: 1.2.4
 License: GPLv2 or later
