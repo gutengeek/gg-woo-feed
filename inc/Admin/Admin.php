@@ -198,6 +198,9 @@ class Admin {
 	 */
 	public function update_settings() {
 		if ( isset( $_POST['save_page_options'] ) ) {
+			// Verify nonce field
+			gg_woo_feed_verify_nonce('gg_woo_feed_save_form_meta', 'gg_woo_feed_meta_nonce');
+
 			$tab     = $this->get_tab_active();
 			$objects = $this->load_object_settings();
 			if ( isset( $objects[ $tab ] ) ) {

@@ -554,6 +554,21 @@ if ( ! function_exists( 'gg_woo_feed_wc_version_check' ) ) {
 	}
 }
 
+if ( ! function_exists( 'gg_woo_feed_verify_nonce' ) ) {
+	/**
+	 * Verify nonce field
+	 *
+	 * @param string $version
+	 *
+	 * @return bool
+	 */
+	function gg_woo_feed_verify_nonce( $action, $name = '_wpnonce' ) {
+		if ( !isset( $_REQUEST[$name] ) || !wp_verify_nonce( $_REQUEST[$name], $action ) ) {
+			wp_die( __( 'Permission denied.', 'gg-woo-feed' ) );
+		}
+	}
+}
+
 if ( ! function_exists( 'gg_woo_feed_get_field_output_type_options' ) ) {
 	function gg_woo_feed_get_field_output_type_options() {
 		$dropdown = new Dropdown();
