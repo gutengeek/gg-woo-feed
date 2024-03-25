@@ -11,6 +11,8 @@ use GG_Woo_Feed\Common\Upload;
  * @return void
  */
 function gg_woo_feed_provider_mapping_view() {
+	check_ajax_referer( 'gg_woo_feed_nonce' );
+
 	if ( ! current_user_can( 'manage_woocommerce' ) ) {
 		wp_send_json_error( esc_html__( 'Unauthorized Action.', 'gg-woo-feed' ) );
 		die();
@@ -58,6 +60,8 @@ add_action( 'wp_ajax_gg_woo_feed_provider_mapping_view', 'gg_woo_feed_provider_m
  * @return void
  */
 function gg_woo_feed_add_new_filter_condition() {
+	check_ajax_referer( 'gg_woo_feed_nonce' );
+
 	if ( ! current_user_can( 'manage_woocommerce' ) ) {
 		wp_send_json_error( esc_html__( 'Unauthorized Action.', 'gg-woo-feed' ) );
 		die();
@@ -113,6 +117,8 @@ add_action( 'wp_ajax_gg_woo_feed_add_new_filter_condition', 'gg_woo_feed_add_new
  * @return void
  */
 function gg_woo_feed_add_new_filter_by_attributes_condition() {
+	check_ajax_referer( 'gg_woo_feed_nonce' );
+
 	if ( ! current_user_can( 'manage_woocommerce' ) ) {
 		wp_send_json_error( esc_html__( 'Unauthorized Action.', 'gg-woo-feed' ) );
 		die();
@@ -248,6 +254,8 @@ add_action( 'wp_ajax_gg_woo_feed_save_config', 'gg_woo_feed_save_config' );
  * Get products via AJAX.
  */
 function gg_woo_feed_get_products_for_feed() {
+	check_ajax_referer( 'gg_woo_feed_nonce' );
+
 	$file_name = sanitize_text_field( $_REQUEST['file_name'] );
 
 	try {
@@ -281,6 +289,8 @@ add_action( 'wp_ajax_gg_woo_feed_get_products_for_feed', 'gg_woo_feed_get_produc
  * Make batch feed via AJAX.
  */
 function gg_woo_feed_make_batch_feed() {
+	check_ajax_referer( 'gg_woo_feed_nonce' );
+
 	$file_name = sanitize_text_field( $_REQUEST['file_name'] );
 	$products  = isset( $_REQUEST['products'] ) ? array_map( 'absint', $_REQUEST['products'] ) : [];
 	$loop      = sanitize_text_field( $_REQUEST['loop'] );
@@ -307,6 +317,8 @@ add_action( 'wp_ajax_gg_woo_feed_make_batch_feed', 'gg_woo_feed_make_batch_feed'
  * Save feed file via AJAX.
  */
 function gg_woo_feed_save_feed_file() {
+	check_ajax_referer( 'gg_woo_feed_nonce' );
+
 	$file_name = sanitize_text_field( $_REQUEST['file_name'] );
 
 	try {

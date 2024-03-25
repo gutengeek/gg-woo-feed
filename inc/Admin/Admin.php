@@ -106,6 +106,15 @@ class Admin {
 
 		if ( null !== $current_screen && ( ( false !== strpos( $current_screen->id, 'gg-woo-feed-add-feed' ) ) || 'toplevel_page_gg-woo-feed-feeds' === $current_screen->id ) ) {
 			wp_enqueue_script( 'gg_woo_feed-feed', GGWOOFEED_URL . 'assets/js/feed.js', [ 'jquery-ui-sortable' ], $this->version, false );
+
+			wp_localize_script(
+				'gg_woo_feed-feed',
+				'ggWooFeed',
+				[
+					'manage_feeds_link' => esc_url( admin_url( 'admin.php?page=gg-woo-feed-feeds' ) ),
+					'nonce'             => wp_create_nonce( 'gg_woo_feed_nonce' ),
+				]
+			);
 		}
 
 		wp_localize_script(
