@@ -147,6 +147,7 @@
             method: 'POST',
             data: {
               action: 'gg_woo_feed_provider_mapping_view',
+              _ajax_nonce: ggWooFeed.nonce,
               provider: provider
             },
             beforeSend: () => {}
@@ -237,6 +238,7 @@
           method: 'POST',
           data: {
             action: 'gg_woo_feed_get_products_for_feed',
+            _ajax_nonce: ggWooFeed.nonce,
             file_name: file_name,
           },
           beforeSend: () => {}
@@ -274,6 +276,7 @@
             action: 'gg_woo_feed_make_batch_feed',
             file_name: file_name,
             products: batch,
+            _ajax_nonce: ggWooFeed.nonce,
             loop: n,
           },
           beforeSend: () => {
@@ -308,6 +311,7 @@
           method: 'POST',
           data: {
             action: 'gg_woo_feed_save_feed_file',
+            _ajax_nonce: ggWooFeed.nonce,
             file_name: file_name,
           },
           beforeSend: () => {
@@ -464,6 +468,7 @@
             method: 'POST',
             data: {
               action: 'gg_woo_feed_add_new_filter_condition',
+              _ajax_nonce: ggWooFeed.nonce,
             },
           } ).always( () => {
 
@@ -515,6 +520,7 @@
             method: 'POST',
             data: {
               action: 'gg_woo_feed_add_new_filter_by_attributes_condition',
+              _ajax_nonce: ggWooFeed.nonce,
             },
           } ).always( () => {
 

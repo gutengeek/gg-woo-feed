@@ -260,9 +260,9 @@
             method: 'POST',
             data: {
               action: 'gg_woo_feed_make_batch_feed',
-              _ajax_nonce: ggWooFeed.nonce,
               file_name: file_name,
               products: batch,
+              _ajax_nonce: ggWooFeed.nonce,
               loop: n
             },
             beforeSend: function beforeSend() {
@@ -443,7 +443,7 @@
               method: 'POST',
               data: {
                 action: 'gg_woo_feed_add_new_filter_condition',
-                _ajax_nonce: ggWooFeed.nonce,
+                _ajax_nonce: ggWooFeed.nonce
               }
             }).always(function () {}).done(function (res) {
               $filter_body.append(res.data.row);
@@ -496,7 +496,7 @@
               method: 'POST',
               data: {
                 action: 'gg_woo_feed_add_new_filter_by_attributes_condition',
-                _ajax_nonce: ggWooFeed.nonce,
+                _ajax_nonce: ggWooFeed.nonce
               }
             }).always(function () {}).done(function (res) {
               $filter_body.append(res.data.row);
