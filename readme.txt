@@ -1,6 +1,6 @@
 === GG Woo Feed for WooCommerce Shopping Feed on Google Facebook and Other Channels ===
 Contributors: gutengeek, ndoublehwp
-Tags: WooCommerce Feed, Product Feed, WooCommerce Google Merchant, Google Shopping, Google Shopping Feed, WooCommerce Product Feed, Facebook Product Feed, XML product feed, CSV Product Feed, TXT Product Feed,  XML CSV TXT product feed
+Tags: WooCommerce Feed, Product Feed, Google Shopping Feed, Facebook Product Feed, XML CSV TXT product feed
 Requires at least: 4.9
 Tested up to: 6.4.3
 Requires PHP: 5.6
@@ -20,6 +20,8 @@ Moreover, insteads of uploading information of products step by step or preparin
 You can connect all requirements & recommend fields of WooCommerce Feeds with Google Shopping Feed for WooCommerce. Also, this **WooCommerce Google Feed** allows to authorize, upload product feeds and get report of Google merchant center, without login Google merchant server.
 
 Equal importance, after you activate the plugin, you can easily create a new WooCommerce product feed, selecting a provider shopping, filter items, and uploading it on those sites. The product feeds can be automatically updated & uploaded according to a given schedule and Sync your product to various shopping engines. No matter the speed of generating feeds, it is completely quick and rapid to save your priceless time. Even though your store contains 10k+ products, it still works smoothly. A piece of cake!
+
+= Features =
 
 ## GG Woo Feed - Google Shopping key features:
 
