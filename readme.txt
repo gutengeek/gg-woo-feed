@@ -2,9 +2,9 @@
 Contributors: gutengeek, ndoublehwp
 Tags: WooCommerce Feed, Product Feed, WooCommerce Google Merchant, Google Shopping, Google Shopping Feed, WooCommerce Product Feed, Facebook Product Feed, XML product feed, CSV Product Feed, TXT Product Feed,  XML CSV TXT product feed
 Requires at least: 4.9
-Tested up to: 6.4.2
+Tested up to: 6.4.3
 Requires PHP: 5.6
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -119,6 +119,9 @@ GG Woo Feed plugin supports to generate feeds daily, twicedaily or every hour. W
 * System tickets support 24/7 available : [free support](https://themelexus.ticksy.com/ "Visit the Plugin support forum")
 
 == Changelog ==
+
+= 1.2.6 =
+* Update security
 
 = 1.2.5 =
 * Fix bug: Adding verify nonce for settings
